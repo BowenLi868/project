@@ -1,0 +1,10 @@
+<view class="ticket-list">
+    <view class="ticket-item" data-item="{{item}}" wx:for="{{ticketData}}" wx:key="item">
+        <ticket fromMy="{{true}}" ticketData="{{item}}"></ticket>
+    </view>
+</view>
+<view class="nodata" wx:if="{{ticketData.length==0}}">暂无数据</view>
+<view class="btm-logo {{ticketData.length==0?'fixed':''}}">
+    <image src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/comment-logo-detail.png"></image>
+</view>
+<loading loaded="{{loaded}}"></loading>

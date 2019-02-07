@@ -1,0 +1,171 @@
+.share-head-img {
+    width: 100%;
+    height: 500rpx;
+}
+
+.share-receive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40rpx;
+}
+
+.giver-text {
+    font-size: 32rpx;
+    color: #333333;
+    margin-top: 20rpx;
+}
+
+.giver-coupon {
+    position: relative;
+    margin-top: 40rpx;
+}
+
+.coupon-img {
+    width: 660rpx;
+    height: 247rpx;
+}
+
+.coupon-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.coupon-head {
+    height: 163rpx;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    box-sizing: border-box;
+    padding: 20rpx 54rpx 16rpx 54rpx;
+}
+
+.coupon-price {
+    color: #EE5A52;
+}
+
+.coupon-price-num {
+    font-weight: bold;
+    font-size: 100rpx;
+}
+
+.coupon-price-unit {
+    margin-left: 10rpx;
+    font-size: 30rpx;
+}
+
+.coupon-title {
+    font-size: 38rpx;
+    color: #5D5D5D;
+}
+
+.coupon-note {
+    height: 76rpx;
+    line-height: 76rpx;
+    padding-left: 54rpx;
+    font-size: 26rpx;
+    color: #909090;
+    font-weight: 300;
+}
+
+.phone-content {
+    width: 100%;
+    padding: 20rpx 14rpx;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+}
+
+.get-content {
+    width: 100%;
+    padding: 20rpx 10rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.store-content {
+    font-size: 28rpx;
+    color: #919191;
+    padding-left: 10rpx;
+}
+
+.rule {
+    padding: 33rpx;
+}
+
+.card {
+    padding: 15rpx;
+}
+
+.bottom {
+    padding-top: 38rpx;
+    padding-bottom: 40rpx;
+}
+
+.love-kitchen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 15rpx;
+    padding-right: 15rpx;
+}
+
+.kitchen-title-img {
+    width: 684rpx;
+    height: 77rpx;
+}
+
+.love-kitchen-title {
+    margin-top: 20rpx;
+    font-size: 26rpx;
+    color: #333333;
+}
+
+.kitchen-container {
+    width: 100%;
+    padding: 20rpx 15rpx 0rpx 15rpx;
+    margin-top: 30rpx;
+    box-sizing: border-box;
+    box-shadow: 0rpx 0rpx 8rpx #D0D0D0;
+    border-radius: 8rpx;
+}
+
+.kitchen-love-item {
+    border-bottom: 1rpx solid #D0D0D0;
+    margin-top: 30rpx;
+}
+
+.kitchen-love-item:first-child {
+    margin-top: 0;
+}
+
+.kitchen-love-item:last-child {
+    border-bottom: none;
+}
+
+.packet-btn {
+    width: 640rpx;
+    margin: 0rpx 10rpx 30rpx 10rpx;
+    height: 86rpx;
+    background-color: #EE5A52;
+    color: #fff;
+    text-align: center;
+    line-height: 86rpx;
+    border-radius: 8rpx;
+    font-size: 32rpx;
+}
+
+.re-info {
+    font-size: 28rpx;
+    color: #909090;
+}
+
+.re-info-phone {
+    color: #EE5A52;
+}

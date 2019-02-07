@@ -1,0 +1,27 @@
+<view class="manage-item-container">
+    <view bindtap="gotoOrderDetail" class="item-main" data-orderid="{{itemData.orderID}}">
+        <view class="item-left">
+            <image class="item-headsrc" src="https://image.jiashuangkuaizi.com/images/kitchen/0/1473338487_955.png" style="background-image: url({{itemData.headSrc}}),url(https://image.jiashuangkuaizi.com/images/kitchen/0/1474274623_13507.png);background-size: cover;background-position: center center;background-repeat: no-repeat;"></image>
+            <view class="item-info">
+                <view class="item-name">{{itemData.userName}}</view>
+                <view class="item-eattime">就餐时间：{{itemData.eatingTime}}</view>
+            </view>
+        </view>
+        <view class="item-order-link">
+            <text>订单详情</text>
+            <image class="link-sorr" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/arrow-right1.png"></image>
+        </view>
+    </view>
+    <view class="item-bottom">
+        <view class="bottom-left">
+            <view class="manage-type">{{itemData.currentStatus}}</view>
+            <view class="pay" wx:if="{{itemData.orderStatus!=0&&itemData.orderStatus!=22}}">{{itemData.sendWord}} 实际支付{{itemData.orderPay}}元</view>
+            <view class="pay" wx:if="{{itemData.orderStatus==0||itemData.orderStatus==22}}">{{itemData.sendWord}} 需支付{{itemData.toPayFee}}元</view>
+        </view>
+        <view class="bottom-right">
+            <view bindtap="gotoKitchenDetail" class="kitchen-detail" data-kitchenid="{{itemData.kitchenID}}" wx:if="{{manageType==6}}">厨房详情</view>
+            <view bindtap="gotoEvaluate" class="kitchen-detail" data-kitchenid="{{itemData.kitchenID}}" data-orderid="{{itemData.orderID}}" data-uid="{{itemData.userID}}" wx:if="{{itemData.currentStatus=='待评价'}}">去评价</view>
+            <view bindtap="gotoPay" class="kitchen-detail" data-orderid="{{itemData.orderID}}" data-orderprice="{{itemData.toPayFee}}" wx:if="{{itemData.currentStatus=='待支付'}}">去支付</view>
+        </view>
+    </view>
+</view>

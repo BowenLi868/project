@@ -1,0 +1,6 @@
+<view class="mini-ticket-container">
+    <image class="mini-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/ticket-mini{{type=='over'?'over':''}}.png"></image>
+    <view class="mini-text-container {{type}}">{{text}}
+  </view>
+    <image class="mini-type" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/mticket-type-{{type}}.png" wx:if="{{type}}"></image>
+</view>

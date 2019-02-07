@@ -1,0 +1,13 @@
+{
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "回家吃饭送你30元券包",
+    "usingComponents": {
+        "user-head": "../../../components/user/user-head/user-head",
+        "phone": "../../../components/share/phone/phone",
+        "rule": "../../../components/share/rule/rule",
+        "card": "../../../components/share/card/card",
+        "bottom": "../../../components/share/bottom/bottom",
+        "navbar": "../../../components/public/navbar/navbar",
+        "kitchen-love-item": "../../../components/share/kitchen-love-item/kitchen-love-item"
+    }
+}

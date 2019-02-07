@@ -1,0 +1,183 @@
+.share-head-img {
+    width: 100%;
+    height: 500rpx;
+}
+
+.share-receive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45rpx 45rpx 10rpx 45rpx;
+}
+
+.phone-content {
+    width: 100%;
+    padding: 20rpx 10rpx;
+    box-sizing: border-box;
+}
+
+.rule {
+    padding: 33rpx;
+}
+
+.card {
+    padding: 15rpx;
+}
+
+.bottom {
+    padding-top: 38rpx;
+    padding-bottom: 40rpx;
+}
+
+.packet-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.pc-title {
+    font-size: 36rpx;
+    color: #333333;
+}
+
+.packet-ticket {
+    width: 100%;
+    margin-top: 53rpx;
+    position: relative;
+}
+
+.packet-ticket-img {
+    width: 100%;
+    height: 202rpx;
+}
+
+.packet-info {
+    width: 100%;
+    height: 202rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.packet-name-container {
+    width: 102rpx;
+    height: 202rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.packet-name {
+    width: 36rpx;
+    font-size: 36rpx;
+    color: #5D5D5D;
+    line-height: 40rpx;
+}
+
+.packet-value {
+    flex-grow: 2;
+    text-align: center;
+    line-height: 202rpx;
+    color: #EE5A52;
+    font-size: 122rpx;
+}
+
+.packet-unit {
+    font-size: 32rpx;
+}
+
+.packet-btn {
+    width: 640rpx;
+    margin: 30rpx 10rpx;
+    height: 86rpx;
+    background-color: #EE5A52;
+    color: #fff;
+    text-align: center;
+    line-height: 86rpx;
+    border-radius: 8rpx;
+    font-size: 32rpx;
+}
+
+.re-info {
+    font-size: 28rpx;
+    color: #909090;
+}
+
+.re-info-phone {
+    color: #EE5A52;
+}
+
+.packet-gone {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gone-img {
+    width: 251rpx;
+    height: 209rpx;
+}
+
+.gone-text {
+    font-size: 34rpx;
+    color: #858585;
+    text-align: center;
+    margin-top: 20rpx;
+    margin-bottom: 38rpx;
+}
+
+.gone-btn {
+    height: 66rpx;
+    width: 235rpx;
+    border: 1rpx solid #EA4D45;
+    color: #EA4D45;
+    font-size: 30rpx;
+    line-height: 66rpx;
+    text-align: center;
+    border-radius: 6rpx;
+}
+
+.love-kitchen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 15rpx;
+    padding-right: 15rpx;
+}
+
+.kitchen-title-img {
+    width: 684rpx;
+    height: 77rpx;
+}
+
+.love-kitchen-title {
+    margin-top: 20rpx;
+    font-size: 26rpx;
+    color: #333333;
+}
+
+.kitchen-container {
+    width: 100%;
+    padding: 20rpx 15rpx 0rpx 15rpx;
+    margin-top: 30rpx;
+    box-sizing: border-box;
+    box-shadow: 0rpx 0rpx 8rpx #D0D0D0;
+    border-radius: 8rpx;
+}
+
+.kitchen-love-item {
+    border-bottom: 1rpx solid #D0D0D0;
+    margin-top: 30rpx;
+}
+
+.kitchen-love-item:first-child {
+    margin-top: 0;
+}
+
+.kitchen-love-item:last-child {
+    border-bottom: none;
+}

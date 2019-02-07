@@ -1,0 +1,6 @@
+<view class="data-location-container">
+    <image class="location-status-icon location-status-{{locationStatus}}" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/location-{{locationStatus}}.png"></image>
+    <view class="location-status-text location-status-{{locationStatus}}">
+    {{locationStatus=='success'?locationText:locationStatus=='fail'?'定位失败':'定位中...'}}
+  </view>
+</view>

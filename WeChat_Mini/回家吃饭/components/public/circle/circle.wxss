@@ -1,0 +1,9 @@
+.circle-container {
+    display: inline-block;
+    width: 30rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    text-align: center;
+    color: #fff;
+    border-radius: 15rpx;
+}

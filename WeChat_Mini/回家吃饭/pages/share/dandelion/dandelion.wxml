@@ -1,0 +1,52 @@
+<view class="share-container">
+    <view class="share-head">
+        <image class="share-head-img" mode="widthFix" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/share-head.png"></image>
+    </view>
+    <view class="share-receive">
+        <view class="giver-head">
+            <user-head headSize="100" headSrc="{{inviter.avatar_url}}"></user-head>
+        </view>
+        <view class="giver-text">{{inviter.nickname}}，送你30元券包</view>
+        <view class="giver-coupon">
+            <image class="coupon-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/pgy-coupon.png"></image>
+            <view class="coupon-info">
+                <view class="coupon-head">
+                    <view class="coupon-price">
+                        <text class="coupon-price-num">30</text>
+                        <text class="coupon-price-unit">元.券包</text>
+                    </view>
+                    <view class="coupon-title">新人尝鲜券</view>
+                </view>
+                <view class="coupon-note">{{couponInfo}}</view>
+            </view>
+        </view>
+        <view class="phone-content" wx:if="{{pageStatus=='INIT'}}">
+            <phone bind:receive="receive" phone="{{phone||''}}"></phone>
+        </view>
+        <view class="get-content" wx:if="{{pageStatus=='GET'}}">
+            <view bindtap="gotoIndex" class="packet-btn">马上使用</view>
+            <view class="re-info">
+      已放入账户<text class="re-info-phone">{{phone||''}}</text>,去查看厨房下单
+      </view>
+        </view>
+    </view>
+    <view class="love-kitchen" wx:if="{{kitchenList&&kitchenList.length}}">
+        <image class="kitchen-title-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/love-kitchen-title.png"></image>
+        <view class="love-kitchen-title">根据订餐、收藏和浏览记录自动生成</view>
+        <view class="kitchen-container">
+            <view bindtap="gotoKitchen" class="kitchen-love-item" data-item="{{item}}" wx:for="{{kitchenList}}" wx:key="item">
+                <kitchen-love-item item="{{item}}"></kitchen-love-item>
+            </view>
+        </view>
+    </view>
+    <view class="rule">
+        <rule rules="{{rules}}"></rule>
+    </view>
+    <view class="card">
+        <card></card>
+    </view>
+    <view class="bottom">
+        <bottom></bottom>
+    </view>
+</view>
+<navbar></navbar>

@@ -1,0 +1,12 @@
+<view class="rule-container">
+    <image class="rule-title" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/active-rule.png"></image>
+    <view class="rule-details">
+        <view class="rule-item" wx:for="{{rules}}" wx:key="item">
+            <view class="rule-il">
+                <image class="rule-il-bk" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/rule-il.png"></image>
+                <text>{{index+1}}</text>
+            </view>
+            <view class="rule-msg">{{item}}</view>
+        </view>
+    </view>
+</view>

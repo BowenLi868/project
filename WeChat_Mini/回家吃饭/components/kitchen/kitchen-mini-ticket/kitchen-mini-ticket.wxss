@@ -1,0 +1,28 @@
+.mini-ticket-container {
+    position: relative;
+}
+
+.mini-img {
+    width: 151rpx;
+    height: 74rpx;
+}
+
+.mini-text-container {
+    position: absolute;
+    top: 20rpx;
+    left: 32rpx;
+    font-size: 20rpx;
+    color: #5D5D5D;
+}
+
+.mini-type {
+    position: absolute;
+    width: 50rpx;
+    height: 50rpx;
+    right: 0rpx;
+    top: 0rpx;
+}
+
+.mini-text-container.type {
+    color: #D0D0D0;
+}

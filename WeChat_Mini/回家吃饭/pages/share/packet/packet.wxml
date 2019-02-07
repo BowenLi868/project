@@ -1,0 +1,55 @@
+<view class="share-container">
+    <view class="share-head">
+        <image class="share-head-img" mode="widthFix" src="{{pageData.headImg||'http://image.jiashuangkuaizi.com/image/wxapp/hjcf/share-head.png'}}"></image>
+    </view>
+    <view class="share-receive">
+        <view class="phone-content" wx:if="{{pageStatus=='INIT'}}">
+            <phone bind:receive="receive" phone="{{pageData.phone||''}}"></phone>
+        </view>
+        <view class="packet-content" wx:if="{{pageStatus=='GET'}}">
+            <view class="pc-title">恭喜您抢到了</view>
+            <view class="packet-ticket" wx:for="{{couponData}}" wx:key="item">
+                <image class="packet-ticket-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/packet-ticket.png"></image>
+                <view class="packet-info">
+                    <view class="packet-name-container">
+                        <view class="packet-name">{{item.title}}</view>
+                    </view>
+                    <view class="packet-value">{{item.money}}<text class="packet-unit">元</text>
+                    </view>
+                </view>
+            </view>
+            <view bindtap="gotoIndex" class="packet-btn">马上使用</view>
+            <view class="re-info">
+      红包已放入账户：<text class="re-info-phone">{{pageData.phone}}</text>
+                <text bindtap="reset" class="re-info-phone">  修改</text>
+            </view>
+        </view>
+        <view class="packet-gone" wx:if="{{pageStatus=='GONE'}}">
+            <image class="gone-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/packet-over.png"></image>
+            <view class="gone-text">
+                <view class="gone-line1">好遗憾</view>
+                <view class="gone-line2">红包已经抢光啦～</view>
+            </view>
+            <view class="gone-btn">下单领红包</view>
+        </view>
+    </view>
+    <view class="love-kitchen" wx:if="{{kitchenList&&kitchenList.length}}">
+        <image class="kitchen-title-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/love-kitchen-title.png"></image>
+        <view class="love-kitchen-title">根据订餐、收藏和浏览记录自动生成</view>
+        <view class="kitchen-container">
+            <view bindtap="gotoKitchen" class="kitchen-love-item" data-item="{{item}}" wx:for="{{kitchenList}}" wx:key="item">
+                <kitchen-love-item item="{{item}}"></kitchen-love-item>
+            </view>
+        </view>
+    </view>
+    <view class="rule">
+        <rule rules="{{pageData.rules||[]}}"></rule>
+    </view>
+    <view class="card">
+        <card></card>
+    </view>
+    <view class="bottom">
+        <bottom></bottom>
+    </view>
+</view>
+<navbar></navbar>

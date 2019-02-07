@@ -1,0 +1,116 @@
+page {
+    background-color: #F2F3F4;
+}
+
+.location {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 96rpx;
+    width: 100%;
+    background-color: #fff;
+    padding: 0 34rpx;
+    align-items: center;
+    z-index: 99;
+}
+
+.location-icon {
+    width: 20rpx;
+    height: 25rpx;
+}
+
+.location-text {
+    font-size: 24rpx;
+    height: 24rpx;
+    line-height: 24rpx;
+    color: #5D5D5D;
+    margin-left: 14rpx;
+}
+
+.head-info {
+    padding: 0 30rpx;
+    padding-top: 131rpx;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 5rpx rgba(76,76,76,0.15);
+    margin-bottom: 20rpx;
+    background-color: #fff;
+}
+
+.head-info .left-info .head-hi {
+    height: 66rpx;
+    line-height: 66rpx;
+    font-size: 66rpx;
+    color: #333333;
+    font-weight: normal;
+    font-family: serif;
+}
+
+.head-info .left-info .head-msg {
+    margin-top: 34rpx;
+    margin-bottom: 49rpx;
+    height: 32rpx;
+    line-height: 32rpx;
+    font-size: 32rpx;
+    color: #5D5D5D;
+    font-weight: 300;
+}
+
+.head-info .right-info {
+    min-width: 200rpx;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.near-container {
+    background-color: #F2F3F4;
+    box-shadow: 0 0 5rpx rgba(76,76,76,0.15);
+}
+
+.near-list {
+    background-color: #fff;
+    padding-bottom: 200rpx;
+}
+
+.near-title {
+    padding-top: 26rpx;
+    padding-bottom: 40rpx;
+    display: flex;
+    justify-content: center;
+    margin: 0 30rpx;
+    border-bottom: 1rpx solid #D0D0D0;
+}
+
+.near-icon {
+    height: 36rpx;
+    width: 28rpx;
+}
+
+.near-title-text {
+    height: 36rpx;
+    color: #333333;
+    font-size: 36rpx;
+    line-height: 36rpx;
+    margin-left: 14rpx;
+    font-family: 'Times New Roman',Times,serif;
+}
+
+.data-error {
+    padding-top: 84rpx;
+    margin: 0 30rpx;
+    border-top: 1rpx solid #D0D0D0;
+}
+
+.my-fixed {
+    position: fixed;
+    right: 20rpx;
+    bottom: 40rpx;
+    width: 105rpx;
+    height: 105rpx;
+}
+
+.my-fixed .my {
+    width: 105rpx;
+    height: 105rpx;
+}

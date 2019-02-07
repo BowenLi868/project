@@ -1,0 +1,20 @@
+<view bindtap="switchOpenReason" class="ticket-card-container">
+    <image class="ticket-card" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/ticket{{ticketData.usable?'':'-empty'}}-back.png"></image>
+    <view class="ticket-main {{!ticketData.usable?'unusable':ticketData.over?'over':''}}">
+        <view class="ticket-main-info">{{ticketData.title}}</view>
+        <view class="ticket-main-warning">
+            <view class="warning-li" wx:for="{{ticketData.warnArray}}" wx:key="item">{{item}}</view>
+        </view>
+    </view>
+    <view bindtap="gotoKitchen" class="gotoKitchen" wx:if="{{fromMy}}">去厨房 ▸</view>
+    <image class="ticket-has" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/ticket{{ticketData.has?'-has':ticketData.over?'-empty':''}}.png" wx:if="{{(ticketData.has||ticketData.over)&&!fromMy}}"></image>
+    <view class="ticket-unusable" wx:if="{{!ticketData.usable}}">
+        <view class="unusable-title">
+            <text>不可用原因</text>
+            <image class="open-reason" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/reason-{{isOpenUnUnable?'close':'open'}}.png"></image>
+        </view>
+        <view class="ticket-unusable-reason" wx:if="{{isOpenUnUnable}}">
+            <view class="reason-li" wx:for="{{ticketData.ununableReason}}" wx:key="item">{{item}}</view>
+        </view>
+    </view>
+</view>

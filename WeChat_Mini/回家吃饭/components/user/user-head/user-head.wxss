@@ -1,0 +1,51 @@
+.user-head-contanier {
+    position: relative;
+}
+
+.user-head-contanier .user-head-img80 {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 40rpx;
+}
+
+.user-head-img88 {
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 44rpx;
+}
+
+.user-head-img90 {
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 45rpx;
+}
+
+.user-head-img144 {
+    width: 144rpx;
+    height: 144rpx;
+    border-radius: 72rpx;
+}
+
+.user-head-contanier .user-is-better {
+    width: 36rpx;
+    height: 36rpx;
+    border-radius: 18rpx;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0rpx;
+    right: -5rpx;
+}
+
+.user-head-contanier .user-is-better .user-better-text {
+    width: 32rpx;
+    height: 32rpx;
+    line-height: 32rpx;
+    text-align: center;
+    border-radius: 16rpx;
+    background-color: #C7B08C;
+    color: #fff;
+    font-size: 22rpx;
+}

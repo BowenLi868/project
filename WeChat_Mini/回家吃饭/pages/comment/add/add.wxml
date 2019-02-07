@@ -1,0 +1,67 @@
+<view class="comment-add-main">
+    <view class="kitchen-main">
+        <view class="kitchen">
+            <image mode="aspectFill" src="{{preComment.kitchen_image_url}}"></image>
+        </view>
+        <view class="order-info">
+            <view class="kitchen-title">{{preComment.kitchen_name}}</view>
+            <view class="order-detail">{{preComment.send_type_text}} 实际支付：{{preComment.real_pay_fee}}元</view>
+        </view>
+    </view>
+    <view class="comment-main">
+        <view class="comment-title" wx:if="{{preComment.send_type==1}}">
+            <view class="line"></view>
+            <view class="title">
+                <image src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/send.png"></image>
+                <text>  · 为{{preComment.express_host}}打分</text>
+            </view>
+        </view>
+        <view class="send-content" wx:if="{{preComment.send_type==1}}">
+            <view class="star">
+                <image bindtap="setSendStar" data-num="{{item+1}}" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/comment-star.png" wx:for="{{sendStar}}" wx:key="item"></image>
+                <image bindtap="setSendStar" data-num="{{item+1+sendStar}}" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/comment-star-empty.png" wx:for="{{5-sendStar}}" wx:key="item"></image>
+            </view>
+            <view class="star-text" wx:if="{{sendStarTxt}}">{{sendStarTxt}}</view>
+            <view class="tag-list timestar" wx:if="{{sendStar>0}}">
+                <view bindtap="chooseTimeTag" class="tag-item {{timeTag[item.tag]?'active':''}}" data-item="{{item}}" wx:for="{{preComment.time}}" wx:key="item">{{item.content}}</view>
+            </view>
+            <view class="tag-list" wx:if="{{sendStar>0}}">
+                <view bindtap="chooseExpTag" class="tag-item {{expTag[item.tag]?'active':''}}" data-item="{{item}}" wx:if="{{item.star==sendStar}}" wx:for="{{preComment.express}}" wx:key="item">{{item.content}}</view>
+            </view>
+        </view>
+        <view class="kitchen-title">
+            <view class="line"></view>
+            <view class="title">
+                <image src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/dish.png"></image>
+                <text>  · 为厨房打分</text>
+            </view>
+        </view>
+        <view class="kitchen-content">
+            <view class="star">
+                <image bindtap="setKitchenStar" data-num="{{item+1}}" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/comment-star.png" wx:for="{{kitchenStar}}" wx:key="item"></image>
+                <image bindtap="setKitchenStar" data-num="{{item+1+kitchenStar}}" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/comment-star-empty.png" wx:for="{{5-kitchenStar}}" wx:key="item"></image>
+            </view>
+            <view class="star-text" wx:if="{{kitchenStarTxt}}">{{kitchenStarTxt}}</view>
+            <view class="tag-list" wx:if="{{kitchenStar>0}}">
+                <view bindtap="chooseOrderTag" class="tag-item {{orderTag[item.tag]?'active':''}}" data-item="{{item}}" wx:if="{{item.star==kitchenStar}}" wx:for="{{preComment.order}}" wx:key="item">{{item.content}}</view>
+            </view>
+        </view>
+        <view class="comment-content" wx:if="{{loaded}}">
+            <textarea bindblur="blurText" bindfocus="focusText" bindinput="inputWord" cursorSpacing="94" maxlength="500" placeholder="{{starAdvice[kitchenStar]}}" placeholderClass="placeholder" value="{{word}}"></textarea>
+            <view class="word-num">{{500-wordLength}}字</view>
+        </view>
+        <view class="dish-list">
+            <view class="dish-item" wx:for="{{preComment.praise}}" wx:key="item">
+                <view class="dish-name">{{item.dish_name}}</view>
+                <view class="dish-comment">
+                    <image bindtap="setZan" class="zan" data-item="{{item}}" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/comment-zan{{dishTag[item.dish_id]=='zan'?'':'-grey'}}.png"></image>
+                    <image bindtap="setCai" class="cai" data-item="{{item}}" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/comment-cai{{dishTag[item.dish_id]=='cai'?'':'-grey'}}.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="submit">
+            <view bindtap="submitComment" class="submit-btn">提交评价</view>
+        </view>
+    </view>
+</view>
+<loading loaded="{{loaded}}"></loading>

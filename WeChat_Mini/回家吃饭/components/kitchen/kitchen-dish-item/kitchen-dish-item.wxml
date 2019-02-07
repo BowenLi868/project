@@ -1,0 +1,36 @@
+<view class="dish-item-container">
+    <view class="dish-info">
+        <view class="dish-info-left">
+            <image class="info-left-img" mode="aspectFill" src="{{dishItem.thumbnail_image_url}}"></image>
+            <view class="dish-recommend-tag" wx:if="{{dishItem.dish_recommend_tag}}">{{dishItem.dish_recommend_tag}}</view>
+        </view>
+        <view class="dish-info-right">
+            <view class="dish-top">
+                <view class="dish-title">{{dishItem.dish_name}}</view>
+                <view class="dish-tj">
+                    <text wx:if="{{dishItem.dateType==0}}">还剩{{dishItem.stock}}份 · </text>{{dishItem.eat_num}}人品尝过</view>
+                <view class="dish-mark">
+                    <mark markText="{{dishItem.special_notice}}" wx:if="{{dishItem.special_notice}}"></mark>
+                </view>
+            </view>
+            <view class="dish-bottom">
+                <view class="dish-bottom-left">
+                    <view class="dish-with-rice" wx:if="{{dishItem.has_staple!=0}}">加{{dishItem.staple_name}}{{dishItem.staple_price*dishItem.staple_num}}元</view>
+                    <view class="dish-price">
+                        <view class="dish-now-price">￥{{dishItem.special_dish?dishItem.special_price:dishItem.price}}</view>
+                        <view class="dish-old-price" wx:if="{{dishItem.special_dish}}">￥{{dishItem.price}}</view>
+                    </view>
+                </view>
+                <view class="dish-bottom-right">
+                    <order-number bind:callback="orderNumberCallback" max="{{dishItem.leftStock}}" orderDetail="{{dishItem}}" orderNum="{{dishItem.orderNum}}" orderText="{{dishItem.orderText}}" wx:if="{{!dishItem.stock_notice}}"></order-number>
+                    <text class="stock-notice" wx:if="{{dishItem.stock_notice}}">{{dishItem.stock_notice}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <mark class="activity-tag" markText="{{item}}" markType="grey" wx:for="{{dishItem.activity_tags}}" wx:key="item"></mark>
+    <view class="dish-note" wx:if="{{dishItem.description}}">
+        <image class="dish-note-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/dish-note-img.png"></image>
+        <view class="dish-note-text">{{dishItem.description}}</view>
+    </view>
+</view>

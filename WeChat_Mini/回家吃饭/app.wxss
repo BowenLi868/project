@@ -1,0 +1,13 @@
+page {
+    background-color: #fff;
+    height: 100%;
+}
+
+.page-fixed {
+    height: 100%;
+    overflow: hidden;
+}
+
+.padbom68 {
+    padding-bottom: 68rpx;
+}

@@ -1,0 +1,42 @@
+<view class="comment-item-container">
+    <view class="item-left">
+        <user-head headSize="90" headSrc="{{commentData.avatar_url}}"></user-head>
+    </view>
+    <view class="item-right">
+        <view class="item-user-info">
+            <view class="user-info-left">
+                <view class="info-name">{{commentData.nickname}}</view>
+                <view class="info-letter">
+                    <user-star starNum="{{commentData.star}}"></user-star>
+                    <text class="info-letter-date">{{commentData.create_time}}</text>
+                </view>
+            </view>
+            <view class="user-info-right">
+                <mark class="user-mark" markText="吃过{{commentData.ordinal}}次" markType="grey" wx:if="{{commentData.ordinal}}"></mark>
+                <mark class="user-mark" markText="{{commentData.send_type}}" markType="grey" wx:if="{{commentData.send_type!='配送'}}"></mark>
+            </view>
+        </view>
+        <view class="item-comment">{{commentData.content||'该饭友没有评价'}}</view>
+        <view class="item-zan-container" wx:if="{{commentData.praise.length!=0}}">
+            <image class="item-zan-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/zan.png"></image>
+            <view class="item-zan-text" wx:for="{{commentData.praise}}" wx:key="item">{{item.dish_name}}</view>
+        </view>
+        <scroll-view class="comment-img-scroll" scrollX="true" wx:if="{{commentData.thumbnail_image_url.length!=0}}">
+            <image class="comment-img" mode="aspectFill" src="{{item}}" wx:for="{{commentData.thumbnail_image_url}}" wx:key="item"></image>
+        </scroll-view>
+        <view class="recomment-container" wx:for="{{commentData.children}}" wx:key="item">
+            <view class="recomment-title">
+                <view class="recomment-name">家厨回复</view>
+                <view class="recomment-date">{{item.create_time}}</view>
+            </view>
+            <view class="recomment-text">{{item.content}}</view>
+        </view>
+        <view class="recomment-container" wx:for="{{commentData.platform}}" wx:key="item">
+            <view class="recomment-title">
+                <view class="recomment-name">平台回复</view>
+                <view class="recomment-date">{{item.create_time}}</view>
+            </view>
+            <view class="recomment-text">{{item.content}}</view>
+        </view>
+    </view>
+</view>

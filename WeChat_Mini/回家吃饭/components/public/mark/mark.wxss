@@ -1,0 +1,23 @@
+.mark-container {
+    display: inline-block;
+    text-align: center;
+    height: 30rpx;
+    line-height: 30rpx;
+    font-size: 20rpx;
+    color: #fff;
+    border-radius: 6rpx;
+    padding-left: 8rpx;
+    padding-right: 8rpx;
+}
+
+.mark-container.blue {
+    background-color: #99CFFF;
+}
+
+.mark-container.grey {
+    background-color: #D0D0D0;
+}
+
+.mark-container.red {
+    background-color: #EE5A52;
+}

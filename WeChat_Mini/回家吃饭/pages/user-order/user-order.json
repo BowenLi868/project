@@ -1,0 +1,7 @@
+{
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#f2f3f4",
+    "usingComponents": {
+        "order-secure": "../../components/order/order-secure/order-secure"
+    }
+}

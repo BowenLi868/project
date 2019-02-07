@@ -1,0 +1,9 @@
+{
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "data-location": "../../components/data/data-location/data-location",
+        "data-exception": "../../components/data/data-exception/data-exception",
+        "mark": "../../components/public/mark/mark",
+        "loading": "../../components/public/loading/loading"
+    }
+}

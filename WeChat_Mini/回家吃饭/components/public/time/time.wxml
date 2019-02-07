@@ -1,0 +1,33 @@
+<view class="time-container">
+    <view bindtap="cancleHandle" class="time-mask"></view>
+    <view class="time-main">
+        <view class="main-title">
+            <view bindtap="cancleHandle" class="time-cancle">取消</view>
+            <view class="time-today">{{timeData.title}}</view>
+            <view bindtap="saveHandle" class="time-save">确定</view>
+        </view>
+        <view class="time-pick-container">
+            <view class="pick-main">
+                <view class="day-container">
+                    <scroll-view bindscroll="dayScroll" bindtouchmove="touchEnd" class="day-scroll" scrollIntoView="{{dayInto}}" scrollY="true">
+                        <view class="day-item" id="day-2"></view>
+                        <view class="day-item" id="day-1"></view>
+                        <view bindtap="clickDay" class="day-item" data-index="{{index}}" data-value="{{item}}" id="day{{index}}" wx:for="{{timeData.dayArray}}" wx:key="item">{{item.text}}</view>
+                        <view class="day-item" id="day{{timeData.dayArray.length}}"></view>
+                        <view class="day-item" id="day{{timeData.dayArray.length+1}}"></view>
+                    </scroll-view>
+                </view>
+                <view class="time-container-inner">
+                    <scroll-view bindscroll="timeScroll" bindtouchmove="touchEnd" class="time-scroll" scrollIntoView="{{timeInto}}" scrollY="true">
+                        <view class="time-item" id="time-2"></view>
+                        <view class="time-item" id="time-1"></view>
+                        <view bindtap="clickTime" class="time-item" data-index="{{index}}" data-value="{{item}}" id="time{{index}}" wx:for="{{timeData.timeArray}}" wx:key="item">{{item.time}}<mark markText="{{item.title}}" markType="red" wx:if="{{index==0}}"></mark>
+                        </view>
+                        <view class="time-item" id="time{{timeData.timeArray.length}}"></view>
+                        <view class="time-item" id="time{{timeData.timeArray.length+1}}"></view>
+                    </scroll-view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

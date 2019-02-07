@@ -1,0 +1,347 @@
+page {
+    background-color: #F2F3F4;
+    height: 100%;
+    position: relative;
+}
+
+.detail-contanier {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.detail-header {
+    position: relative;
+}
+
+.detail-header .detail-header-img {
+    width: 100%;
+    position: relative;
+}
+
+.pos-absolute {
+    position: absolute!important;
+    top: 0;
+    left: 0;
+}
+
+.detail-header {
+    background-color: #fff;
+}
+
+.detail-header-info {
+    padding: 180rpx 0rpx 0 0rpx;
+    margin: 0 30rpx 0 30rpx;
+    position: relative;
+    border-bottom: 1rpx solid #D0D0D0;
+    box-sizing: border-box;
+}
+
+.detail-info-card {
+    margin-top: -352rpx;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-info-backimg {
+    width: 690rpx;
+    height: 380rpx;
+}
+
+.detail-info-back {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 26rpx;
+}
+
+.detail-star {
+    height: 54rpx;
+    display: flex;
+    align-items: center;
+}
+
+.no-star {
+    font-size: 24rpx;
+    color: #5D5D5D;
+    margin-left: 20rpx;
+}
+
+.header-info-note {
+    font-size: 24rpx;
+    color: #5D5D5D;
+}
+
+.detail-user-star {
+}
+
+.detail-title {
+    margin-top: 2rpx;
+    font-size: 42rpx;
+    color: #313131;
+    font-weight: 300;
+    height: 64rpx;
+    line-height: 64rpx;
+}
+
+.detail-location {
+    margin-top: 2rpx;
+    font-size: 24rpx;
+    color: #5D5D5D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36rpx;
+    line-height: 36rpx;
+}
+
+.detail-msg {
+    margin-top: 10rpx;
+    font-size: 24rpx;
+    color: #5D5D5D;
+}
+
+.detail-location-img {
+    width: 15rpx;
+    height: 19rpx;
+    margin-right: 16rpx;
+}
+
+.header-info-more {
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #D0D0D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-info-more .more-text {
+    color: #ED564F;
+    font-size: 26rpx;
+}
+
+.header-info-more .more-img {
+    margin-left: 16rpx;
+    width: 15rpx;
+    height: 8rpx;
+}
+
+.kitchen-tag-contanier {
+    box-shadow: 0 0 5rpx rgba(76,76,76,0.15);
+    margin-bottom: 20rpx;
+}
+
+.kitchen-info-container {
+    padding: 0 30rpx 0rpx 30rpx;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 0 5rpx rgba(76,76,76,0.15);
+}
+
+.kitchen-info-title {
+    height: 92rpx;
+    box-sizing: content-box;
+    border-bottom: 1rpx solid #D0D0D0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.kitchen-info-main {
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 110rpx;
+    box-sizing: border-box;
+}
+
+.kitchen-comment-main {
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.kitchen-info-title .title-item {
+    font-size: 32rpx;
+    color: #5D5D5D;
+    height: 92rpx;
+    line-height: 92rpx;
+    width: 200rpx;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.kitchen-info-title .title-item.active {
+    color: #EA4F47;
+    border-bottom: 4rpx solid #EE5A52;
+}
+
+.kitchen-main-left {
+    width: 120rpx;
+    box-sizing: border-box;
+    margin-right: 20rpx;
+    height: 100%;
+    padding-top: 20rpx;
+}
+
+.kitchen-main-right {
+    padding-top: 20rpx;
+    flex: 2;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.kitchen-title-scroll {
+    height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.kitchen-main-scroll {
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.kitchen-left-menu {
+    width: 118rpx;
+    height: 118rpx;
+    border: 1rpx solid #D0D0D0;
+    border-radius: 10rpx;
+    padding: 6rpx 8rpx;
+    position: relative;
+    margin-top: 20rpx;
+    font-size: 24rpx;
+    line-height: 28rpx;
+    color: #5D5D5D;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+}
+
+.kitchen-left-menu:first-child {
+    margin-top: 0;
+}
+
+.kitchen-left-menu.active {
+    border: 1rpx solid #EE5A52;
+    color: #fff;
+    background-color: #EE5A52;
+}
+
+.kitchen-left-menu .kitchen-menu-num {
+    position: absolute;
+    right: 12rpx;
+    bottom: 0rpx;
+    font-size: 52rpx;
+    height: 52rpx;
+    line-height: 52rpx;
+    color: #000000;
+    opacity: 0.2;
+}
+
+.kitchen-left-menu.active .kitchen-menu-num {
+    color: #fff;
+    opacity: 0.3;
+}
+
+.mini-ticket-container .mini-imgcontainer {
+    height: 120rpx;
+    width: 100%;
+}
+
+.mini-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 25rpx 50rpx 20rpx 20rpx;
+    height: 100%;
+    width: 500rpx;
+    overflow: hidden;
+    display: flex;
+}
+
+.main-title {
+    padding: 20rpx 0 26rpx 5rpx;
+    font-size: 30rpx;
+    color: #333333;
+    font-weight: bold;
+    font-family: 'Times New Roman',Times,serif;
+}
+
+.shopping-cart-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.comment-main-scroll {
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 20rpx;
+}
+
+.no-dish,.no-comment {
+    font-size: 32rpx;
+    color: #909090;
+    width: 100%;
+    text-align: center;
+    margin-top: 100rpx;
+}
+
+.kitchen_notice {
+    position: absolute;
+    font-size: 50rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    left: 4rpx;
+    top: -75rpx;
+    color: #fff;
+    background-color: transparent;
+    font-family: 'Times New Roman',Times,serif;
+}
+
+.padbottom30 {
+    padding-bottom: 30rpx;
+}
+
+kitchen-shopping-cart {
+    width: 100%;
+}
+
+.magbtm110 {
+    margin-bottom: 110rpx;
+}
+
+.my-main-fixed {
+    position: absolute;
+    left: 20rpx;
+    top: 20rpx;
+    width: 105rpx;
+    height: 105rpx;
+}
+
+.my {
+    width: 105rpx;
+    height: 105rpx;
+}

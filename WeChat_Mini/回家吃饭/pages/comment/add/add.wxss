@@ -1,0 +1,212 @@
+.kitchen-main {
+    padding: 36rpx 30rpx;
+    box-sizing: border-box;
+    display: flex;
+    border-top: 1rpx solid #D0D0D0;
+    border-bottom: 1rpx solid #D0D0D0;
+}
+
+.kitchen {
+    width: 108rpx;
+    height: 108rpx;
+    border-radius: 54rpx;
+    overflow: hidden;
+}
+
+.kitchen image {
+    width: 108rpx;
+    height: 108rpx;
+}
+
+.order-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    margin-left: 30rpx;
+}
+
+.kitchen-title {
+    font-size: 36rpx;
+    color: #313131;
+    font-weight: 300;
+}
+
+.order-detail {
+    font-size: 24rpx;
+    color: #909090;
+    font-weight: 300;
+}
+
+.comment-main {
+    padding: 30rpx 30rpx;
+}
+
+.comment-title,.kitchen-title {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    align-items: center;
+    font-size: 26rpx;
+    color: #333333;
+    font-weight: lighter;
+    z-index: 11;
+    padding: 0 14rpx;
+}
+
+.line {
+    height: 0;
+    border-top: 1rpx solid #D0D0D0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.comment-title image {
+    width: 30rpx;
+    height: 22rpx;
+}
+
+.kitchen-title image {
+    width: 26rpx;
+    height: 25rpx;
+}
+
+.send-content {
+    margin: 43rpx 0 60rpx 0;
+}
+
+.kitchen-content {
+    margin: 43rpx 0 60rpx 0;
+}
+
+.star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star image {
+    width: 47rpx;
+    height: 45rpx;
+    margin: 0 20rpx;
+}
+
+.star-text {
+    color: #5D5D5D;
+    font-size: 26rpx;
+    text-align: center;
+    margin: 28rpx 0 17rpx 0;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag-item {
+    border: 1rpx solid #D0D0D0;
+    font-size: 30rpx;
+    color: #909090;
+    padding: 10rpx 14rpx;
+    margin: 10rpx;
+    border-radius: 10rpx;
+}
+
+.comment-content {
+    width: 100%;
+    height: 216rpx;
+    position: relative;
+    border: 1rpx solid #D0D0D0;
+    border-radius: 14rpx;
+    margin-top: 20rpx;
+}
+
+.comment-content textarea {
+    width: 100%;
+    height: 180rpx;
+    font-size: 30rpx;
+    color: #5D5D5D;
+    font-weight: 300;
+    padding: 15rpx 20rpx;
+    box-sizing: border-box;
+}
+
+.word-num {
+    position: absolute;
+    right: 20rpx;
+    bottom: 17rpx;
+    font-size: 24rpx;
+    color: #909090;
+}
+
+.placeholder {
+    font-size: 30rpx;
+    color: #D0D0D0;
+    font-weight: 300;
+    z-index: 9;
+}
+
+.dish-list {
+    margin-top: 34rpx;
+}
+
+.dish-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30rpx;
+    color: #5D5D5D;
+    margin: 10rpx 0;
+}
+
+.dish-comment image {
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.zan {
+    margin-right: 50rpx;
+}
+
+.cai {
+    margin-right: 20rpx;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 63rpx;
+}
+
+.submit-btn {
+    width: 280rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    color: #fff;
+    background-color: #EE5A52;
+    border-radius: 10rpx;
+    font-size: 30rpx;
+}
+
+.timestar {
+    margin-bottom: 20rpx;
+}
+
+.timestar .tag-item {
+    background-color: #f3f3f3;
+}
+
+.active.tag-item {
+    border-color: #EE5A52;
+    color: #EE5A52;
+}

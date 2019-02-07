@@ -1,0 +1,6 @@
+<view class="order-number-container">
+    <image bindtap="plus" class="order-plus" mode="aspectFill" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/plus.png"></image>
+    <view class="order-number-text" wx:if="{{orderNum!=0}}">{{orderNum}}</view>
+    <image bindtap="reduce" class="order-reduce" mode="aspectFill" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/reduce.png" wx:if="{{orderNum!=0}}"></image>
+    <view bindtap="plus" class="order-text" wx:if="{{orderNum==0&&orderText}}">{{orderText}}</view>
+</view>

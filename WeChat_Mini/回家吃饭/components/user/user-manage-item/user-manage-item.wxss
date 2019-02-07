@@ -1,0 +1,91 @@
+.manage-item-container {
+    padding: 30rpx;
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: 0 0 5rpx rgba(76,76,76,0.15);
+}
+
+.item-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 40rpx;
+}
+
+.item-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-headsrc {
+    width: 77rpx;
+    height: 77rpx;
+    border-radius: 38rpx;
+    margin-right: 20rpx;
+}
+
+.link-sorr {
+    width: 13rpx;
+    height: 23rpx;
+    margin-left: 20rpx;
+    vertical-align: middle;
+}
+
+.item-name {
+    font-size: 36rpx;
+    font-weight: 300;
+    color: #333333;
+    margin-bottom: 8rpx;
+}
+
+.item-order-link,.item-eattime {
+    font-size: 24rpx;
+    color: #909090;
+    height: 24rpx;
+    line-height: 24rpx;
+}
+
+.item-bottom {
+    padding-top: 20rpx;
+    border-top: 1rpx solid #D0D0D0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.manage-type {
+    font-size: 36rpx;
+    color: #EE5A52;
+    font-weight: 300;
+}
+
+.pay {
+    font-size: 24rpx;
+    color: #535353;
+}
+
+.kitchen-detail {
+    width: 170rpx;
+    height: 60rpx;
+    text-align: center;
+    line-height: 60rpx;
+    color: #fff;
+    font-size: 30rpx;
+    background-color: #EE5A52;
+    border-radius: 10rpx;
+}
+
+.bottom-right {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.kitchen-comment {
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1rpx solid #EE5A52;
+    color: #EE5A52;
+    margin-right: 20rpx;
+}

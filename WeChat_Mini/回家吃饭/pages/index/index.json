@@ -1,0 +1,11 @@
+{
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "user-head": "../../components/user/user-head/user-head",
+        "data-exception": "../../components/data/data-exception/data-exception",
+        "data-near-item": "../../components/data/data-near-item/data-near-item",
+        "loading": "../../components/public/loading/loading",
+        "floatImg": "../../components/public/floatImg/floatImg"
+    }
+}

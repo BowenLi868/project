@@ -1,0 +1,13 @@
+.user-star-container {
+    display: flex;
+}
+
+.user-star-container .user-star-icon {
+    width: 21rpx;
+    height: 20rpx;
+    margin-left: 8rpx;
+}
+
+.user-star-icon:first-child {
+    margin-left: 0;
+}

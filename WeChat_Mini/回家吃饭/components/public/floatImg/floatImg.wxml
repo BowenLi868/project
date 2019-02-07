@@ -1,0 +1,7 @@
+<view class="floatImg-container" wx:if="{{isShow}}">
+    <view class="floatImg-mask"></view>
+    <view class="floatImg-main">
+        <image bindtap="linkTo" class="floatImg" src="{{src}}"></image>
+        <image bindtap="close" class="floatImg-close" src="/images/float-close.png"></image>
+    </view>
+</view>

@@ -1,0 +1,11 @@
+<view class="order-message-container">
+    <view class="msg-tag">
+        <view bindtap="addTag" class="tag-item {{item.checked?'active':''}}" data-item="{{item}}" wx:for="{{tags}}" wx:key="{{item}}">{{item.text}}</view>
+    </view>
+    <view class="msg-title">其他留言</view>
+    <view class="msg-area">
+        <textarea bindinput="inputMessage" class="msg-input" maxlength="140" placeholder="请输入您的口味偏好、忌口等其他要求，家厨会尽量满足你" value="{{message}}"></textarea>
+        <text class="msg-number">{{wordNum}}字</text>
+    </view>
+    <view bindtap="save" class="red-btn">完成</view>
+</view>

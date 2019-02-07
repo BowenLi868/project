@@ -1,0 +1,13 @@
+.agreement-title {
+    width: 100%;
+    text-align: center;
+}
+
+.agreement-content {
+    margin: 30rpx;
+    white-space: pre-wrap;
+    font-size: 24rpx;
+    color: #333;
+    letter-spacing: 2rpx;
+    line-height: 30rpx;
+}

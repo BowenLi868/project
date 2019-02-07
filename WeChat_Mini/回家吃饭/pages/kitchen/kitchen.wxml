@@ -1,0 +1,101 @@
+<view class="detail-contanier">
+    <view class="detail-header">
+        <image class="detail-header-img" mode="aspectFill" src="{{kitchenInfo.kitchen_image_url}}"></image>
+        <image class="detail-header-img pos-absolute" mode="aspectFill" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/kitchen-head2.png"></image>
+        <view class="detail-header-info">
+            <view class="detail-info-card">
+                <image class="detail-info-backimg" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/detail-info-back.png"></image>
+                <view class="kitchen_notice" wx:if="{{kitchenInfo.is_open}}">{{kitchenInfo.alertInfo}}</view>
+                <view class="detail-info-back">
+                    <user-head headSize="88" headSrc="{{kitchenInfo.cook_image_url}}" kitchenFlag="{{kitchenInfo.kitchen_flag}}"></user-head>
+                    <view class="detail-star">
+                        <user-star class="detail-user-star" starNum="{{kitchenInfo.star}}"></user-star>
+                        <text class="no-star">{{kitchenInfo.star?'('+kitchenInfo.star+')':'暂无评分'}}</text>
+                    </view>
+                    <view class="detail-title">{{kitchenInfo.kitchen_name}}</view>
+                    <view class="detail-location">
+                        <image class="detail-location-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/location-grey.png"></image>
+                        <view>{{kitchenInfo.address}} 相距{{kitchenInfo.distance}}</view>
+                    </view>
+                    <view class="detail-msg">{{kitchenInfo.native_place}}</view>
+                </view>
+                <view bindtap="gotoMain" class="my-main-fixed">
+                    <image class="my" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/nav-home.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="kitchen-tag-contanier">
+            <kitchen-tag tags="{{kitchenTags}}"></kitchen-tag>
+        </view>
+    </view>
+    <view class="kitchen-info-container {{currentMain=='comment'?'padbottom30':''}}" id="kitchen-info-container">
+        <view class="kitchen-info-title">
+            <view bindtap="switchTitle" class="title-item {{currentMain=='today'?'active':''}}" data-type="today">今日菜品</view>
+            <view bindtap="switchTitle" class="title-item {{currentMain=='tomorrow'?'active':''}}" data-type="tomorrow">明日菜品</view>
+            <view bindtap="switchTitle" class="title-item {{currentMain=='comment'?'active':''}}" data-type="comment">评价({{commentNum}})</view>
+        </view>
+        <view class="kitchen-info-main {{isIPhoneX?'magbtm110':''}}" wx:if="{{currentMain=='today'}}">
+            <view class="kitchen-main-left" wx:if="{{todayList.dish_list.length}}">
+                <scroll-view class="kitchen-title-scroll" scrollY="{{contentMoveAble}}">
+                    <view bindtap="locationToDish" class="kitchen-left-menu  {{todayScrollActive==item.index?'active':''}}" data-item="{{item}}" wx:for="{{todayList.titleList}}" wx:key="item">{{item.title}}
+            <view class="kitchen-menu-num">{{item.number}}</view>
+                    </view>
+                </scroll-view>
+            </view>
+            <view class="kitchen-main-right" wx:if="{{todayList.dish_list.length}}">
+                <scroll-view bindscroll="scrollViewEvent" class="kitchen-main-scroll" scrollIntoView="{{todayScroll}}" scrollY="{{contentMoveAble}}">
+                    <view bindtap="switchTicketDetail" class="mini-ticket-container" wx:if="{{ticketsList.length!=0&&false}}">
+                        <image class="mini-imgcontainer" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/ticket-mask.png"></image>
+                        <view class="mini-container">
+                            <kitchen-mini-ticket text="{{item.title}}" type="{{item.type}}" wx:for="{{ticketsList}}" wx:key="item"></kitchen-mini-ticket>
+                        </view>
+                    </view>
+                    <view class="kitchen-main-list" id="today{{index}}" wx:for="{{todayList.dish_list}}" wx:key="item">
+                        <view class="main-title">{{item.title}}</view>
+                        <view wx:for="{{item.list}}" wx:key="item">
+                            <kitchen-dish-item bind:orderNumberCallback="orderNumberCallback" dishItem="{{item}}"></kitchen-dish-item>
+                        </view>
+                    </view>
+                </scroll-view>
+            </view>
+            <view class="no-dish" wx:if="{{!todayList.dish_list.length}}">暂无菜品</view>
+        </view>
+        <view class="kitchen-info-main {{isIPhoneX?'magbtm110':''}}" wx:if="{{currentMain=='tomorrow'}}">
+            <view class="kitchen-main-left" wx:if="{{tomorrowList.dish_list.length}}">
+                <scroll-view class="kitchen-title-scroll" scrollY="{{contentMoveAble}}">
+                    <view bindtap="locationToDish" class="kitchen-left-menu {{tomorrowScrollActive==item.index?'active':''}}" data-item="{{item}}" wx:for="{{tomorrowList.titleList}}" wx:key="item">{{item.title}}
+            <view class="kitchen-menu-num">{{item.number}}</view>
+                    </view>
+                </scroll-view>
+            </view>
+            <view class="kitchen-main-right" wx:if="{{tomorrowList.dish_list.length}}">
+                <scroll-view bindscroll="scrollViewEvent" class="kitchen-main-scroll" scrollIntoView="{{tomorrowScroll}}" scrollY="{{contentMoveAble}}">
+                    <view bindtap="switchTicketDetail" class="mini-ticket-container" wx:if="{{ticketsList.length!=0&&false}}">
+                        <image class="mini-imgcontainer" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/ticket-mask.png"></image>
+                        <view class="mini-container">
+                            <kitchen-mini-ticket text="{{item.title}}" wx:for="{{ticketsList}}" wx:key="item"></kitchen-mini-ticket>
+                        </view>
+                    </view>
+                    <view class="kitchen-main-list" id="tomorrow{{index}}" wx:for="{{tomorrowList.dish_list}}" wx:key="item">
+                        <view class="main-title">{{item.title}}</view>
+                        <view wx:for="{{item.list}}" wx:key="item">
+                            <kitchen-dish-item bind:orderNumberCallback="orderNumberCallback" data-item="{{item}}" dishItem="{{item}}"></kitchen-dish-item>
+                        </view>
+                    </view>
+                </scroll-view>
+            </view>
+            <view class="no-dish" wx:if="{{!tomorrowList.dish_list.length}}">暂无菜品</view>
+        </view>
+        <view class="kitchen-comment-main {{isIPhoneX?'magbtm110':''}}" wx:if="{{currentMain=='comment'}}">
+            <scroll-view bindscrolltolower="loadCommentData" class="comment-main-scroll" scrollY="{{contentMoveAble}}" wx:if="{{commentList.length}}">
+                <view wx:for="{{commentList}}" wx:key="item">
+                    <kitchen-comment-item commentData="{{item}}"></kitchen-comment-item>
+                </view>
+            </scroll-view>
+            <view class="no-comment" wx:if="{{!commentList.length}}">暂无评论</view>
+        </view>
+    </view>
+</view>
+<kitchen-shopping-cart bind:callback="orderNumberCallback" bind:orderDish="orderDish" bind:riceCallback="riceCallback" bind:shopClearCallBack="shopClearCallBack" bind:switchCollect="switchCollect" bind:viewTomorrow="viewTomorrow" cartData="{{currentMain!='comment'?shopCartInfo[currentMain].cartData:cartData}}" collectData="{{collectData}}" isIphonex="{{isIPhoneX}}" isShowCartList="{{isShowCartList}}" shopDetail="{{shopCartInfo[currentMain]}}" wx:if="{{currentMain!='comment'}}"></kitchen-shopping-cart>
+<kitchen-ticket-detail bind:choseTicket="choseTicket" bind:closeTicketDetail="switchTicketDetail" ticketsData="{{ticketsList}}" wx:if="{{false&&isShowTicketDetail&&ticketsList.length!=0}}"></kitchen-ticket-detail>
+<loading loaded="{{loaded}}"></loading>

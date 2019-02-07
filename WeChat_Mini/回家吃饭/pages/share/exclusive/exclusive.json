@@ -1,0 +1,11 @@
+{
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "回家吃饭新人专享礼券",
+    "usingComponents": {
+        "phone": "../../../components/share/phone/phone",
+        "card": "../../../components/share/card/card",
+        "bottom": "../../../components/share/bottom/bottom",
+        "navbar": "../../../components/public/navbar/navbar",
+        "ticket-coupon": "../../../components/ticket/ticket-coupon/ticket-coupon"
+    }
+}

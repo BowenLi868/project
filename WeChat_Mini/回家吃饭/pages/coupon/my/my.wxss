@@ -1,0 +1,102 @@
+.my-coupon-main {
+    padding: 41rpx 30rpx;
+    box-sizing: border-box;
+    border-top: 1rpx solid #D0D0D0;
+}
+
+.coupon-code {
+    display: none;
+    align-items: center;
+    margin-bottom: 20rpx;
+}
+
+.cop-code-btn {
+    padding-left: 30rpx;
+    font-size: 32rpx;
+    color: #EE5A52;
+}
+
+.cop-code-ipt {
+    flex-grow: 2;
+    height: 68rpx;
+    box-sizing: border-box;
+    border: 1rpx solid #D0D0D0;
+    font-size: 30rpx;
+    color: #5D5D5D;
+    padding-left: 18rpx;
+}
+
+.cop-code-pd {
+    color: #D0D0D0;
+    font-size: 30rpx;
+}
+
+.tkt-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24rpx;
+    color: #909090;
+    height: 58rpx;
+    border-bottom: 1rpx solid #D0D0D0;
+}
+
+.lk-otdate {
+    display: flex;
+    align-items: center;
+}
+
+.lk-otdt-txt {
+    margin-right: 17rpx;
+}
+
+.lk-otdate image {
+    width: 13rpx;
+    height: 23rpx;
+}
+
+.btm-logo {
+    margin-top: 100rpx;
+    margin-bottom: 24rpx;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    bottom: 81rpx;
+}
+
+.btm-logo image {
+    width: 104rpx;
+    height: 33rpx;
+}
+
+.ticket-list {
+    margin-top: 20rpx;
+}
+
+.no-tkt {
+    width: 523rpx;
+    height: 263rpx;
+    margin: 30rpx auto;
+    border: 1rpx dashed #D0D0D0;
+}
+
+.blank {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.blank image {
+    width: 386rpx;
+    height: 149rpx;
+}
+
+.blank .blank-txt {
+    position: absolute;
+    font-size: 30rpx;
+    color: #909090;
+}

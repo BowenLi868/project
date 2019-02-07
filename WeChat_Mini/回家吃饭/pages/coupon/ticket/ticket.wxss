@@ -1,0 +1,30 @@
+.ticket-list {
+    padding: 30rpx;
+    box-sizing: border-box;
+}
+
+.btm-logo {
+    margin-top: 100rpx;
+    margin-bottom: 24rpx;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    bottom: 81rpx;
+}
+
+.btm-logo image {
+    width: 104rpx;
+    height: 33rpx;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.nodata {
+    text-align: center;
+    margin-top: 200rpx;
+    font-size: 30rpx;
+    color: #909090;
+}

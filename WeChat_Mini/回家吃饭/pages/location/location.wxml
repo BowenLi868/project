@@ -1,0 +1,86 @@
+<view class="location-container {{isShowCityChoose||isAddressFocus?'page-fixed':''}}">
+    <view class="location-choose {{isAddressFocus||isShowCityChoose?'height100':''}}">
+        <view class="location-cityoptions" wx:if="{{isShowCityChoose}}">
+            <view class="cityoptions-container">
+                <view bindtap="chooseCity" class="cityoption {{currentCity.name==item.name?'chosed':''}}" data-option="{{item}}" wx:for="{{cityList}}" wx:key="item">
+                    <view class="text">
+            {{item.name}}
+            <image class="city-chosed" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/city-chosed.png"></image>
+                    </view>
+                </view>
+            </view>
+            <view bindtap="switchCityControl" class="mask"></view>
+        </view>
+        <view class="location-searching" wx:if="{{isAddressFocus}}">
+            <scroll-view class="searchingsrcoll" scrollY="true">
+                <view class="search-results" wx:if="{{searchList!=0}}">
+                    <view bindtap="searchToIndex" class="search-result-item" data-item="{{item}}" wx:for="{{searchList}}" wx:key="item">
+                        <view class="result-title">{{item.title}}</view>
+                        <view class="result-address">{{item.address}}</view>
+                    </view>
+                </view>
+                <view class="search-suggestions" wx:if="{{!isAddressHasWord&&searchList.length==0}}">
+                    <view class="location-little-title">
+                        <text class="little-title-text">附近地址</text>
+                    </view>
+                    <view bindtap="searchToIndex" class="search-suggestion-item" data-item="{{item}}" wx:for="{{nearList}}" wx:key="item">
+                        <view class="suggestion-title">{{item.title}}</view>
+                    </view>
+                </view>
+                <view class="search-exception" wx:if="{{isAddressHasWord&&searchList.length==0}}">
+                    <data-exception exceptionType="noaddress"></data-exception>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="location-choose-head">
+            <view bindtap="switchCityControl" class="location-city" wx:if="{{!isAddressFocus}}">
+                <text class="location-city-text">{{currentCity.name||'请选择'}}</text>
+                <image class="location-city-sorr" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/sorr-down.png"></image>
+            </view>
+            <view class="location-addin-container">
+                <input bindfocus="searchAddress" bindinput="writeAddress" class="location-address-input" placeholder="请输入收餐地址" value="{{addressValue}}"></input>
+                <image bindtap="clearAddressInput" class="location-addin-clear" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/address-clear.png" wx:if="{{isAddressHasWord}}"></image>
+            </view>
+            <view bindtap="quitSearchAddress" class="location-addin-cancle" wx:if="{{isAddressFocus}}">取消</view>
+        </view>
+    </view>
+    <view class="location-main-contanier">
+        <view class="location-little-title">
+            <text class="little-title-text">定位地址</text>
+            <view bindtap="reLocation" class="little-title-action">重新定位</view>
+        </view>
+        <view bindtap="locationToIndex" class="location-status">
+            <data-location locationStatus="{{locationStatus}}" locationText="{{locations.locationText}}"></data-location>
+        </view>
+        <view class="location-little-title" wx:if="{{addressList.length!=0}}">
+            <text class="little-title-text">我的送餐地址</text>
+            <view bindtap="addAddress" class="little-title-action">新增地址</view>
+        </view>
+        <view class="location-myaddress" wx:if="{{addressList.length!=0}}">
+            <view class="myaddress-list">
+                <view bindtap="addressToIndex" class="myaddress-item" data-item="{{item}}" wx:if="{{isExplore||index<2}}" wx:for="{{addressList}}" wx:key="item">
+                    <view class="item-left">
+                        <view class="item-title">{{item.addressTitle}}</view>
+                        <view class="item-info">{{item.addressInfo}}</view>
+                    </view>
+                    <view class="item-right">
+                        <mark markText="{{item.addressMark}}" markType="grey" wx:if="{{item.addressMark}}"></mark>
+                    </view>
+                </view>
+            </view>
+            <view bindtap="exploreAddress" class="myaddress-more" wx:if="{{addressList.length>2}}">
+                <text class="myaddress-more-text">{{isExplore?'收起  ':'显示全部'}}</text>
+                <image class="myaddress-more-sorr {{isExplore?'transform180':''}}" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/sorr-down.png"></image>
+            </view>
+        </view>
+        <view class="location-little-title">
+            <text class="little-title-text">附近地址</text>
+        </view>
+        <view class="search-suggestions">
+            <view bindtap="searchToIndex" class="search-suggestion-item" data-item="{{item}}" wx:for="{{nearList}}" wx:key="item">
+                <view class="suggestion-title">{{item.title}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<loading loaded="{{loaded}}"></loading>

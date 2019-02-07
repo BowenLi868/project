@@ -1,0 +1,89 @@
+.time-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.time-mask {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.time-main {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 618rpx;
+    background-color: #fff;
+}
+
+.main-title {
+    padding: 0 30rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 86rpx;
+    font-size: 28rpx;
+    border-bottom: 1rpx solid #D0D0D0;
+}
+
+.time-cancle {
+    color: #909090;
+}
+
+.time-today {
+    font-size: 24rpx;
+    color: #676767;
+}
+
+.time-save {
+    color: #EA4D45;
+}
+
+.pick-main {
+    width: 620rpx;
+    margin: 0 auto;
+    margin-top: 170rpx;
+    border-top: 1rpx solid #D0D0D0;
+    border-bottom: 1rpx solid #D0D0D0;
+    height: 86rpx;
+    display: flex;
+}
+
+.day-container {
+    width: 80rpx;
+    text-align: center;
+    line-height: 86rpx;
+    font-size: 32rpx;
+    color: #333333;
+    margin-left: 150rpx;
+}
+
+.time-container-inner {
+    line-height: 86rpx;
+    font-size: 32rpx;
+    color: #333333;
+    margin-left: 150rpx;
+}
+
+.day-scroll,.time-scroll {
+    height: 430rpx;
+    overflow: visible;
+    white-space: nowrap;
+    margin-top: -172rpx;
+}
+
+.day-item,.time-item {
+    height: 86rpx;
+    line-height: 86rpx;
+}
+
+mark {
+    margin-left: 20rpx;
+}

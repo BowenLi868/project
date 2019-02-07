@@ -1,0 +1,9 @@
+{
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#f2f3f4",
+    "usingComponents": {
+        "user-head": "../../components/user/user-head/user-head",
+        "loading": "../../components/public/loading/loading",
+        "user-manage-item": "../../components/user/user-manage-item/user-manage-item"
+    }
+}

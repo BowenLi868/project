@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "ticket-card": "../../../components/ticket/ticket-card/ticket-card",
+        "loading": "../../../components/public/loading/loading"
+    }
+}

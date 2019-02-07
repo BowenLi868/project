@@ -1,0 +1,149 @@
+page {
+    background-color: #F2F3F4;
+    padding-top: 30rpx;
+    box-sizing: border-box;
+}
+
+.detail-main {
+    background-color: #fff;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    box-shadow: 0 0 5rpx rgba(76,76,76,0.15);
+}
+
+.kitchen-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20rpx 0;
+    border-bottom: 1rpx solid #D0D0D0;
+}
+
+.kitchen-info {
+    display: flex;
+    align-items: center;
+    font-size: 36rpx;
+    color: #313131;
+    font-weight: 300;
+}
+
+.kitchen-info image {
+    width: 90rpx;
+    height: 90rpx;
+}
+
+.kitchen-info text {
+    margin-left: 20rpx;
+}
+
+.kitchen-sorr {
+    width: 13rpx;
+    height: 23rpx;
+}
+
+.my-comment {
+    padding-bottom: 40rpx;
+}
+
+.my-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 30rpx 0 27rpx 0;
+}
+
+.star-info {
+    color: #EE5A52;
+    font-size: 24rpx;
+}
+
+.my-date {
+    font-size: 24rpx;
+    color: #909090;
+}
+
+.my-comment-content {
+    color: #5D5D5D;
+    font-size: 30rpx;
+}
+
+.send-tag {
+    margin-top: 20rpx;
+    display: flex;
+}
+
+.dish-tag {
+    display: flex;
+    margin-top: 10rpx;
+}
+
+.send-tag image {
+    width: 27rpx;
+    height: 27rpx;
+    margin-top: 16rpx;
+    margin-right: 26rpx;
+}
+
+.dish-tag image {
+    width: 27rpx;
+    height: 25rpx;
+    margin-top: 16rpx;
+    margin-right: 26rpx;
+}
+
+.send-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dish-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag-item {
+    font-size: 24rpx;
+    color: #909090;
+    margin-right: 20rpx;
+    margin-top: 12rpx;
+}
+
+.kitchen-comment {
+    border-top: 1rpx solid #D0D0D0;
+    padding-bottom: 46rpx;
+}
+
+.kitchen-comment-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 83rpx;
+    font-size: 30rpx;
+}
+
+.kit-title-txt {
+    color: #EE5A52;
+}
+
+.kit-date {
+    color: #909090;
+    font-size: 24rpx;
+}
+
+.kit-comment-txt {
+    color: #5D5D5D;
+    font-size: 30rpx;
+}
+
+.btm-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 81rpx;
+}
+
+.btm-logo image {
+    width: 104rpx;
+    height: 33rpx;
+}

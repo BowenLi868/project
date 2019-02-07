@@ -1,0 +1,36 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/login/login",
+        "pages/location/location",
+        "pages/order/order-detail/order-detail",
+        "pages/order/order-address/order-address",
+        "pages/order/order-ticket/order-ticket",
+        "pages/order/order-coupon/order-coupon",
+        "pages/address/address",
+        "pages/order/order-message/order-message",
+        "pages/pay/pay",
+        "pages/user/user",
+        "pages/user-order/user-order",
+        "pages/kitchen/kitchen",
+        "pages/agreement/agreement",
+        "pages/share/packet/packet",
+        "pages/share/exclusive/exclusive",
+        "pages/share/dandelion/dandelion",
+        "pages/share/activity/activity",
+        "pages/unit/unit",
+        "components/public/floatImg/floatImg",
+        "pages/comment/add/add",
+        "pages/comment/detail/detail",
+        "pages/coupon/my/my",
+        "pages/coupon/ticket/ticket",
+        "pages/coupon/coupon/coupon"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "回家吃饭",
+        "backgroundColor": "#eeeeee",
+        "backgroundTextStyle": "light"
+    }
+}

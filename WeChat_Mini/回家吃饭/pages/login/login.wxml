@@ -1,0 +1,14 @@
+<view class="login-container">
+    <view class="input-box phone-box">
+        <input bindinput="phoneInput" class="input-in" maxlength="11" placeholder="请输入手机号" type="number" value="{{phone}}"></input>
+    </view>
+    <view class="input-box vlcode-box">
+        <input bindinput="valiCodeInput" class="input-in vlcode-input" placeholder="请输入验证码" type="number" value="{{valiCode}}"></input>
+        <button bindtap="getValiCode" class="get-vlcode">{{count==0?'获取验证码':count+'s'}}</button>
+    </view>
+    <button bindtap="login" class="log-in">登录</button>
+    <view class="bottom-ptl">
+        <view>同意回家吃饭</view>
+        <navigator class="ptl-link" url="/pages/agreement/agreement">用户协议</navigator>
+    </view>
+</view>

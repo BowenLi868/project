@@ -1,0 +1,122 @@
+.dish-item-container {
+    padding: 25rpx 0 45rpx 0;
+    border-top: 1rpx solid #D0D0D0;
+}
+
+.dish-info {
+    display: flex;
+}
+
+.dish-info .dish-info-left {
+    width: 186rpx;
+    height: 186rpx;
+    position: relative;
+}
+
+.info-left-img {
+    width: 186rpx;
+    height: 186rpx;
+    border-radius: 10rpx;
+}
+
+.dish-recommend-tag {
+    position: absolute;
+    top: 10rpx;
+    left: 10rpx;
+    display: inline-block;
+    padding: 6rpx 10rpx;
+    color: #fff;
+    background-color: #EE5A52;
+    font-size: 24rpx;
+    border-radius: 4rpx;
+}
+
+.dish-info-right {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 13rpx;
+}
+
+.dish-info-right .dish-title {
+    font-size: 36rpx;
+    line-height: 36rpx;
+    color: #333333;
+    max-width: 350rpx;
+    white-space: pre-wrap;
+}
+
+.dish-info-right .dish-tj {
+    font-size: 24rpx;
+    color: #909090;
+}
+
+.dish-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dish-bottom-left {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.dish-bottom-left .dish-price {
+    display: flex;
+    align-items: baseline;
+}
+
+.dish-now-price {
+    font-size: 32rpx;
+    color: #EE5A52;
+}
+
+.dish-old-price {
+    margin-left: 12rpx;
+    font-size: 24rpx;
+    color: #909090;
+    text-decoration: line-through;
+}
+
+.dish-with-rice {
+    font-size: 24rpx;
+    color: #EE5A52;
+}
+
+.dish-bottom-right {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 4rpx;
+}
+
+.dish-note {
+    margin-top: 33rpx;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.dish-note-img {
+    width: 40rpx;
+    height: 46rpx;
+    margin-left: 19rpx;
+    margin-right: 40rpx;
+}
+
+.dish-note-text {
+    font-size: 24rpx;
+    color: #909090;
+    max-width: 422rpx;
+    height: auto;
+    white-space: pre-line;
+}
+
+.stock-notice {
+    font-size: 32rpx;
+    color: #909090;
+}
+
+.activity-tag {
+    margin-right: 20rpx;
+}

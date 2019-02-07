@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "mark": "../../../components/public/mark/mark",
+        "loading": "../../../components/public/loading/loading"
+    }
+}

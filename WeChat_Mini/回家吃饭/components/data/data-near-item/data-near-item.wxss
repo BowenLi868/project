@@ -1,0 +1,119 @@
+.near-item-container {
+    padding-top: 43rpx;
+    height: auto;
+}
+
+.near-item-container .near-item-title {
+    margin: 0 30rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.near-item-title .nt-text {
+    font-size: 42rpx;
+    height: 42rpx;
+    line-height: 42rpx;
+    color: #333333;
+}
+
+.near-item-title .nt-note {
+    font-size: 32rpx;
+    font-weight: 300;
+    height: 32rpx;
+    line-height: 32rpx;
+    color: #EE5A52;
+    margin-top: 14rpx;
+}
+
+.near-item-title .nt-info {
+    font-size: 24rpx;
+    height: 24rpx;
+    line-height: 24rpx;
+    color: #909090;
+    margin-top: 14rpx;
+}
+
+.nt-mark {
+    margin-top: 4rpx;
+}
+
+.near-item-container .near-scoll {
+    padding-top: 26rpx;
+    padding-bottom: 30rpx;
+}
+
+.near-scoll-container {
+    height: 188rpx;
+    flex-direction: row;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.near-scoll .near-scoll-item {
+    display: inline-flex;
+    margin-right: 20rpx;
+}
+
+.near-scoll .near-scoll-more {
+    width: 188rpx;
+    height: 188rpx;
+    border-radius: 6rpx;
+}
+
+.near-scoll-item .near-scoll-img {
+    width: 280rpx;
+    height: 188rpx;
+    border-radius: 6rpx;
+    position: relative;
+}
+
+.img-tags {
+    position: absolute;
+    top: 14rpx;
+    left: 14rpx;
+    padding: 4rpx 10rpx;
+    border-radius: 4rpx;
+    background-color: #EE5A52;
+    color: #fff;
+    font-size: 24rpx;
+    display: inline-block;
+}
+
+.near-sorr {
+    margin-left: 12rpx;
+    width: 6rpx;
+    height: 12rpx;
+}
+
+.near-scoll-item:first-child {
+    margin-left: 30rpx;
+}
+
+.near-bottom {
+    margin: 0 30rpx;
+    padding-bottom: 26rpx;
+    border-bottom: 1rpx solid #D0D0D0;
+}
+
+.near-address {
+    color: #909090;
+    font-size: 24rpx;
+    height: 24rpx;
+    line-height: 24rpx;
+    text-align: right;
+}
+
+.near-ticket {
+    margin-top: 12rpx;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+}
+
+ticket-mark {
+    margin: 4rpx 0 4rpx 20rpx;
+}
+
+user-zan {
+    margin-right: 14rpx;
+}

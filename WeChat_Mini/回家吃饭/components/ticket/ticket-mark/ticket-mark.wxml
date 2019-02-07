@@ -1,0 +1,4 @@
+<view class="ticket-container">
+    <image class="ticket-img" src="{{ticketImg}}"></image>
+    <view class="ticket-text">{{ticketText}}</view>
+</view>

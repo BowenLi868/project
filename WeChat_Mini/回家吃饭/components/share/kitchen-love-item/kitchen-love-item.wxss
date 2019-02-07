@@ -1,0 +1,107 @@
+.item-container {
+    width: 100%;
+}
+
+.item-img {
+    width: 100%;
+    height: 462rpx;
+    border-radius: 8rpx;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20rpx;
+}
+
+.head-img {
+    width: 100rpx;
+    height: 100rpx;
+    margin-right: 30rpx;
+}
+
+.kitchen-member {
+    flex-grow: 2;
+}
+
+.kitchen-name {
+    display: flex;
+    align-items: center;
+}
+
+.name-text {
+    font-size: 34rpx;
+    font-weight: 300;
+    color: #333333;
+}
+
+.eat-times {
+    font-size: 20rpx;
+    font-weight: lighter;
+    color: #C7A572;
+    border: 1rpx solid #C7A572;
+    border-radius: 6rpx;
+    padding: 0 10rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+}
+
+.kitchen-cj {
+    display: flex;
+    align-items: center;
+}
+
+.cj-text {
+    font-size: 22rpx;
+    color: #5D5D5D;
+    margin-left: 20rpx;
+}
+
+.place {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24rpx;
+}
+
+.place-p {
+    color: #5D5D5D;
+}
+
+.place-d {
+    color: #EE5A52;
+    font-weight: bold;
+    margin-right: 10rpx;
+}
+
+.note {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30rpx;
+}
+
+.note-img-container {
+    display: block;
+    width: 40rpx;
+    height: 46rpx;
+    margin-left: 37rpx;
+    margin-right: 43rpx;
+}
+
+.note-img {
+    width: 40rpx;
+    height: 46rpx;
+}
+
+.note-text {
+    flex-grow: 2;
+    color: #909090;
+    font-size: 24rpx;
+    padding-right: 8rpx;
+    letter-spacing: 2rpx;
+}
+
+.mgl0 {
+    margin-left: 0;
+}

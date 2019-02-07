@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "ticket": "../../../components/ticket/ticket-card/ticket-card",
+        "coupon": "../../../components/ticket/ticket-coupon/ticket-coupon",
+        "loading": "../../../components/public/loading/loading"
+    }
+}

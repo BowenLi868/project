@@ -1,0 +1,4 @@
+<view class="order-secure-container">
+    <image class="order-secure-logo" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/picc.png"></image>
+    <view class="order-secure-text">{{text||'本订单将由中国人保财险（PICC）承担食品安全保障'}}</view>
+</view>

@@ -1,0 +1,22 @@
+<view class="kitchen-tag-container">
+    <scroll-view class="kitchen-tag-scroll" scrollX="true">
+        <view class="scroll-item" wx:if="{{tags.type1.length}}">
+            <view class="tag-item" wx:if="{{item.type==1}}" wx:for="{{tags.type1}}" wx:key="item">
+                <view class="tag-text">
+                    <image class="tag-img" src="{{item.icon}}"></image>{{item.title}}</view>
+            </view>
+        </view>
+        <view class="scroll-item" wx:if="{{tags.type0.length}}">
+            <view class="tag-item" wx:if="{{item.type==0}}" wx:for="{{tags.type0}}" wx:key="item">
+                <view class="tag-text">
+                    <image class="tag-img" src="{{item.icon}}"></image>{{item.title}}</view>
+            </view>
+        </view>
+        <view class="scroll-item" wx:if="{{tags.type2.length}}">
+            <view class="tag-item {{item.status==0?'gray':''}}" wx:if="{{item.type==2}}" wx:for="{{tags.type2}}" wx:key="item">
+                <view class="tag-text">
+                    <image class="tag-img" src="{{item.icon}}"></image>{{item.title}}</view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

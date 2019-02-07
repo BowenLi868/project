@@ -1,0 +1,10 @@
+<view class="ticket-list">
+    <view class="ticket-item" data-item="{{item}}" wx:for="{{couponData}}" wx:key="item">
+        <coupon ticketData="{{item}}"></coupon>
+    </view>
+</view>
+<view class="nodata" wx:if="{{couponData.length==0}}">暂无数据</view>
+<view class="btm-logo {{couponData.length==0?'fixed':''}}">
+    <image src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/comment-logo-detail.png"></image>
+</view>
+<loading loaded="{{loaded}}"></loading>

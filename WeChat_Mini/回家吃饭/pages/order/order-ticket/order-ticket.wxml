@@ -1,0 +1,6 @@
+<view class="order-ticket-container">
+    <ticket-card bindtap="choseTicket" data-item="{{item}}" ticketData="{{item}}" wx:for="{{useList}}" wx:key="item"></ticket-card>
+    <view class="unusable-container" wx:if="{{unuseList.length}}">以下为不可用饭票</view>
+    <ticket-card data-item="{{item}}" ticketData="{{item}}" wx:for="{{unuseList}}" wx:key="item"></ticket-card>
+</view>
+<view bindtap="donotUseTicket" class="user-none">本次不使用家厨饭票</view>

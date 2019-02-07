@@ -1,0 +1,20 @@
+.my-main-fixed,.my-fixed {
+    position: fixed;
+    right: 20rpx;
+    bottom: 40rpx;
+    width: 105rpx;
+    height: 105rpx;
+}
+
+.my-fixed {
+    bottom: 140rpx;
+}
+
+.kitchen {
+    bottom: 110rpx!important;
+}
+
+.my {
+    width: 105rpx;
+    height: 105rpx;
+}

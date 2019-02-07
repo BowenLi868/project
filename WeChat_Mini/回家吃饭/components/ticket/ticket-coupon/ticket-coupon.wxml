@@ -1,0 +1,34 @@
+<view bindtap="switchOpenReason" class="ticket-coupon-container">
+    <image class="ticket-card" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/coupon-back.png"></image>
+    <view class="ticket-main {{!ticketData.usable?'unusable':''}}">
+        <view class="ticket-main-info">
+            <view class="ticket-main-coupon">
+                <view>{{ticketData.number}}</view>
+                <view class="ticket-unit">{{ticketData.unit}}</view>
+            </view>
+            <view class="ticket-main-highline">
+                <view>{{ticketData.highline}}</view>
+                <view class="hightext">{{ticketData.highText}}</view>
+            </view>
+        </view>
+        <view class="ticket-main-warning">
+            <view class="warning-li" wx:for="{{ticketData.warnArray}}" wx:key="item">{{item}}</view>
+        </view>
+    </view>
+    <view class="ticket-unusable" wx:if="{{!ticketData.usable&&!ticketData.fromOtd}}">
+        <view class="unusable-title">
+            <text>不可用原因</text>
+            <image class="open-reason" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/reason-{{isOpenUnUnable?'close':'open'}}.png"></image>
+        </view>
+        <view class="ticket-unusable-reason" wx:if="{{isOpenUnUnable}}">
+            <view class="reason-li" wx:if="item" wx:for="{{ticketData.ununableReason}}" wx:key="item">· {{item}}</view>
+        </view>
+    </view>
+    <view class="frosen" wx:if="{{ticketData.is_frozen}}">
+        <view class="frosen-mask"></view>
+        <view class="frosen-content">
+            <view>账户可能存在异常，优惠券暂时冻结</view>
+            <view>请联系客服400-087-7700处理</view>
+        </view>
+    </view>
+</view>

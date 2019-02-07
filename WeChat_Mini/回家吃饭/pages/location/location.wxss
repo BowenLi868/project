@@ -1,0 +1,261 @@
+.location-container {
+    width: 100%;
+}
+
+.location-container .location-choose {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+.location-choose .location-choose-head {
+    display: flex;
+    padding: 30rpx 30rpx 10rpx 30rpx;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #fff;
+    z-index: 12;
+    min-height: 120rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.location-choose-head .location-city {
+    width: 170rpx;
+    height: 68rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1rpx solid #D0D0D0;
+    border-radius: 6rpx;
+    margin-right: 9rpx;
+}
+
+.location-city .location-city-text {
+    font-size: 30rpx;
+    color: #5D5D5D;
+}
+
+.location-city-sorr {
+    width: 15rpx;
+    height: 8rpx;
+    margin-left: 18rpx;
+}
+
+.location-addin-container {
+    flex: 2;
+    position: relative;
+}
+
+.location-address-input {
+    font-size: 30rpx;
+    color: #535353;
+    padding-left: 12rpx;
+    height: 68rpx;
+    border: 1rpx solid #D0D0D0;
+    border-radius: 6rpx;
+}
+
+.location-addin-cancle {
+    color: #909090;
+    font-size: 34rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    padding-left: 25rpx;
+    text-align: right;
+}
+
+.location-addin-clear {
+    position: absolute;
+    width: 28rpx;
+    height: 28rpx;
+    top: 21rpx;
+    right: 24rpx;
+    z-index: 10;
+}
+
+.location-cityoptions {
+    flex: 1;
+    z-index: 12;
+    padding-top: 120rpx;
+    box-sizing: border-box;
+}
+
+.cityoptions-container {
+    padding: 0 30rpx;
+    background-color: #fff;
+}
+
+.location-cityoptions .cityoption {
+    height: 112rpx;
+    border-bottom: 1rpx solid #D0D0D0;
+    color: #535353;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 112rpx;
+}
+
+.cityoption .text {
+    display: inline;
+    position: relative;
+}
+
+.cityoption .text .city-chosed {
+    position: absolute;
+    width: 30rpx;
+    height: 23rpx;
+    left: 95rpx;
+    top: 8rpx;
+    display: none;
+}
+
+.cityoption.chosed {
+    color: #EE5A52;
+}
+
+.cityoption.chosed .text .city-chosed {
+    display: block;
+}
+
+.mask {
+    background-color: #000;
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.height100 {
+    height: 100%;
+}
+
+.location-searching {
+    padding: 0 30rpx;
+    flex: 1;
+    background-color: #fff;
+    z-index: 12;
+    padding-top: 120rpx;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.search-results {
+    padding-bottom: 150rpx;
+}
+
+.search-result-item {
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+    border-bottom: 1rpx solid #D0D0D0;
+}
+
+.search-result-item .result-title,.search-suggestion-item .suggestion-title {
+    font-size: 32rpx;
+    color: #535353;
+}
+
+.search-result-item .result-address {
+    margin-top: 10rpx;
+    font-size: 24rpx;
+    color: #909090;
+}
+
+.search-suggestion-item {
+    padding-top: 36rpx;
+    padding-bottom: 36rpx;
+    border-bottom: 1rpx solid #D0D0D0;
+}
+
+.search-exception {
+    padding-top: 160rpx;
+}
+
+.location-main-contanier {
+    margin-top: 127rpx;
+    margin-bottom: 50rpx;
+    padding: 0 30rpx;
+}
+
+.location-little-title {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1rpx solid #D0D0D0;
+    padding-top: 17rpx;
+    padding-bottom: 17rpx;
+}
+
+.location-little-title .little-title-text {
+    font-size: 24rpx;
+    color: #909090;
+}
+
+.location-little-title .little-title-action {
+    font-size: 24rpx;
+    color: #EE5A52;
+}
+
+.location-status {
+    padding-top: 49rpx;
+    padding-bottom: 49rpx;
+}
+
+.myaddress-item {
+    padding-top: 48rpx;
+    padding-bottom: 48rpx;
+    border-bottom: 1rpx solid #D0D0D0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.myaddress-item .item-left .item-title {
+    font-size: 32rpx;
+    color: #535353;
+}
+
+.myaddress-item .item-left .item-info {
+    font-size: 24rpx;
+    color: #909090;
+}
+
+.myaddress-item .item-right {
+    min-width: 120rpx;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.myaddress-more {
+    padding-top: 38rpx;
+    padding-bottom: 74rpx;
+    font-size: 24rpx;
+    color: #5D5D5D;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myaddress-more-text {
+    display: inline;
+}
+
+.myaddress-more-sorr {
+    width: 15rpx;
+    height: 8rpx;
+    margin-left: 18rpx;
+}
+
+.transform180 {
+    transform: rotate(180deg);
+}
+
+.searchingsrcoll {
+    height: 100%;
+    overflow: hidden;
+}

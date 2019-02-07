@@ -1,0 +1,6 @@
+<view bindtap="gotoCenter" class="my-fixed" wx:if="{{!kitchenPage}}">
+    <image class="my" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/my-empty.png"></image>
+</view>
+<view bindtap="gotoMain" class="my-main-fixed {{!kitchenPage?'':'kitchen'}}">
+    <image class="my" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/nav-home.png"></image>
+</view>

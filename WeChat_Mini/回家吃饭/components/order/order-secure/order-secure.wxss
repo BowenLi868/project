@@ -1,0 +1,16 @@
+.order-secure-container {
+    display: inline-flex;
+    color: #EE5A52;
+    font-size: 22rpx;
+    align-items: baseline;
+}
+
+.order-secure-logo {
+    width: 51rpx;
+    height: 20rpx;
+}
+
+.order-secure-text {
+    display: inline-block;
+    margin-left: 17rpx;
+}

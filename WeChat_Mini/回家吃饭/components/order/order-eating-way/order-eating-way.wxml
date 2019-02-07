@@ -1,0 +1,5 @@
+<view class="eating-way-container">
+    <view bindtap="switchWay" class="eating-way {{currentWay==0&&eatingType.is_distr?'active':''}} {{eatingType.is_distr?'':'disable'}}" data-way="{{eatingType.is_distr?0:-1}}">配送</view>
+    <view bindtap="switchWay" class="eating-way {{currentWay==2?'active':''}} {{eatingType.is_door?'':'disable'}}" data-way="{{eatingType.is_door?2:-1}}">自取</view>
+    <view bindtap="switchWay" class="eating-way {{currentWay==3?'active':''}} {{eatingType.is_refectory?'':'disable'}}" data-way="{{eatingType.is_refectory?3:-1}}">堂食</view>
+</view>

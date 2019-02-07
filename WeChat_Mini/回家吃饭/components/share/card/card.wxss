@@ -1,0 +1,61 @@
+.card-center {
+    position: relative;
+    width: 100%;
+    height: 400rpx;
+    border-radius: 8rpx;
+    margin-top: 80rpx;
+    box-shadow: 0rpx 0rpx 16rpx #D0D0D0;
+    padding-top: 110rpx;
+    box-sizing: border-box;
+    font-size: 24rpx;
+    color: #5D5D5D;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -80rpx;
+    top: -80rpx;
+    width: 160rpx;
+    height: 160rpx;
+}
+
+.title {
+    text-align: center;
+}
+
+.icon-lu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40rpx;
+    padding-left: 45rpx;
+    padding-right: 45rpx;
+    box-sizing: border-box;
+}
+
+.icon-il {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-img {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.icon-il text {
+    margin-top: 20rpx;
+}
+
+.order-secure {
+    margin: 40rpx 15rpx 0 15rpx;
+    flex-grow: 2;
+    border-top: 1rpx solid #D0D0D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

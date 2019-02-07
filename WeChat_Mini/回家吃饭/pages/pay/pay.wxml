@@ -1,0 +1,21 @@
+<view class="pay-container">
+    <view class="pay-item">
+        <view class="money-title">需要支付</view>
+        <view class="money">39.00元</view>
+    </view>
+    <view class="pay-item">
+        <view class="item-left">
+            <image class="alipay-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/alipay-logo.png"></image>
+            <text class="pay-text">支付宝支付</text>
+            <mark markText="推荐"></mark>
+        </view>
+        <image class="item-right" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/sorr-right.png"></image>
+    </view>
+    <view class="pay-item">
+        <view class="item-left">
+            <image class="wx-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/wx-img.png"></image>
+            <text class="pay-text">微信支付</text>
+        </view>
+        <image class="item-right" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/sorr-right.png"></image>
+    </view>
+</view>

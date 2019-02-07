@@ -1,0 +1,145 @@
+<view class="user-order-container">
+    <view class="user-order-title">
+        <view bindtap="switchManage" class="title-item {{manageType=='status'?'active':''}}" data-type="status">订单状态</view>
+        <view bindtap="switchManage" class="title-item {{manageType=='detail'?'active':''}}" data-type="detail">订单详情</view>
+    </view>
+    <view class="order-status-page" wx:if="{{manageType=='status'}}">
+        <image class="image-loadding" src="https://image.jiashuangkuaizi.com/image/h5/dessertZone/loadding2.gif" wx:if="{{imageLoading}}"></image>
+        <view class="order-status-container" wx:for="{{timeList}}" wx:key="item">
+            <view class="order-status-item {{timeList.length-1==index?'padbom200':''}} {{timeList.length-1==index&&isIPhoneX?'padbom268':''}}">
+                <view class="status-item-left {{index==0?'padding-top30':''}}">
+                    <view class="{{timeList.length-1==index?'status-line30':'status-line'}}" wx:if="{{dataList.order_status!=0}}"></view>
+                    <view class="{{index==0?'status-dot-first':'status-dot'}}">
+                        <view class="status-process " wx:if="{{index!=0?true:false}}"></view>
+                        <image class="status-process-end" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/order-end-status.png" wx:if="{{index==0?true:false}}"></image>
+                    </view>
+                </view>
+                <view class="status-item-right">
+                    <view class="status-item-info">
+                        <view class="status-item-title">{{item.update_msg||''}}</view>
+                        <view class="status-item-text">
+                            <text wx:if="{{item.status!=400&&item.status!=0&&item.status!=600&&item.status!=101}}">{{item.bg_msg||''}}</text>
+                            <text bindtap="statusActionHurry" wx:if="{{item.status==400}}">{{item.msgArray[0]}}<text class="red">{{item.dm_phone}}</text>{{item.msgArray[1]}}</text>
+                            <text bindtap="gotoCallCook" wx:if="{{item.status==600}}">{{item.callCookMsg[0]}}<text class="red">{{'联系家厨'}}</text>
+                            </text>
+                            <text wx:if="{{item.status==0}}">{{remainTime}}</text>
+                            <text wx:if="{{item.status==101}}">{{remainCookTime}}</text>
+                        </view>
+                    </view>
+                    <view class="status-item-time">{{item.update_date+' '+item.update_time||''}}</view>
+                </view>
+            </view>
+            <view class="layer-Reminder">
+                <view class="layer-Reminder-content">
+                    <view></view>
+              是否联系{{item.bg_msg}}
+          </view>
+            </view>
+        </view>
+        <view class="order-status-bottom {{isIPhoneX?'padbom68':''}}">
+            <view bindtap="statusActionEated" class="status-action-eated" wx:if="{{eatedRed}}">我已就餐</view>
+            <view bindtap="statusActionHurry" class="status-action-hurry" wx:if="{{hurry}}">我要催单</view>
+            <view bindtap="statusActionHurry" class="status-action-hurry-red" wx:if="{{hurryRed}}">我要催单</view>
+            <view bindtap="gotoPay" class="status-action-hurry-red" wx:if="{{payRed}}">去支付</view>
+            <view bindtap="statusActionCancel" class="status-action-cancel" wx:if="{{cancelOrder}}">取消订单</view>
+            <view bindtap="statusActionBack" class="status-action-cancel" wx:if="{{backOrder}}">我要退单</view>
+            <view bindtap="gotoComment" class="status-action-hurry-red" data-kitchenid="{{dataList.kitchen.kitchen_id}}" data-orderid="{{dataList.order_no}}" data-uid="{{dataList.user_id}}" wx:if="{{goComment}}">去评价</view>
+            <view bindtap="gotoKitchenDetail" class="status-order-again" data-kitchenid="{{dataList.kitchen.kitchen_id}}" wx:if="{{refunded}}">再次下单</view>
+            <view bindtap="gotoCallCook" class="status-order-again" wx:if="{{callCook}}">联系家厨</view>
+        </view>
+    </view>
+    <view class="order-detail-page" wx:if="{{manageType=='detail'}}">
+        <view class="padding-30 box-shadow-first">
+            <view bindtap="gotoKitchenDetail" class="detail-head " data-kitchenid="{{detailList.kitchen_id}}">
+                <view class="detail-head-left">
+                    <image class="detail-head-img" src="https://image.jiashuangkuaizi.com/images/kitchen/0/1473338487_955.png" style="background-image: url({{detailList.kitchen_image_url}}),url(https://image.jiashuangkuaizi.com/images/kitchen/0/1474274623_13507.png);background-size: cover;background-position: center center;background-repeat: no-repeat;"></image>
+                    <text class="detail-head-name">{{detailList.kitchen_name}}</text>
+                </view>
+                <view class="detail-head-right">
+                    <text>去厨房</text>
+                    <image class="head-right-sorr" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/arrow-right1.png"></image>
+                </view>
+            </view>
+            <view class="order-list ">
+                <view class="order-list-item" wx:for="{{detailList.food_list}}" wx:key="item">
+                    <view class="order-list-left">
+                        <text>{{item.food_name}}</text>
+                        <image class="special-dish" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/special-dish.jpg" wx:if="{{item.special_dish==1}}"></image>
+                    </view>
+                    <view class="order-list-right">
+                        <view>
+                            <text class="{{item.special_dish==1?'item-old-price':''}}">￥{{item.original_price}}</text> x{{item.food_num}}</view>
+                        <view class="item-now-price">￥{{item.food_price*item.food_num||0}}</view>
+                    </view>
+                </view>
+                <view class="order-list-item" wx:if="{{detailList.box_fee!=0}}">
+                    <view class="order-list-left">餐盒费</view>
+                    <view class="item-box_fee">￥{{detailList.box_fee}}</view>
+                </view>
+            </view>
+            <view class="order-extra-reason " wx:if="{{detailList.extra_fee.length!=0?true:false}}">
+                <view class="extra-item" wx:for="{{detailList.extra_fee}}" wx:key="item">
+                    <text>{{item.name}}{{item.msg||''}}</text>
+                    <text>￥{{item.value}}</text>
+                </view>
+            </view>
+            <view class="order-delete-item " wx:if="{{detailList.order_fee_list.length!=0?true:false}}">
+                <view class="delete-item" wx:for="{{detailList.order_fee_list}}" wx:key="item">
+                    <text>{{item.name||''}}</text>
+                    <text class="color-red">{{item.value||''}}</text>
+                </view>
+            </view>
+            <view class="pay-total ">
+                <view class="color-red pay-text">￥{{detailList.order_status*1===0||detailList.order_status*1===22?detailList.to_pay_fee:detailList.pay_fee}}</view>
+                <view class="pay-title">{{detailList.order_status*1===0||detailList.order_status*1===22?'需支付':'实付金额'}}</view>
+            </view>
+        </view>
+        <view class="order-bottom-msg padding-30 {{isIPhoneX?'padbom268':'padbom200'}}">
+            <view class="kitchen-msg" wx:if="{{detailList.reason!=''?true:false}}">
+                <view class="kitchen-msg-title red">很抱歉，厨房已拒绝此单</view>
+                <view class="kitchen-msg-text">{{detailList.reason}}</view>
+            </view>
+            <view class="kitchen-msg" wx:if="{{detailList.message!=''?true:false}}">
+                <view class="kitchen-msg-title">给厨房捎句话</view>
+                <view class="kitchen-msg-text">{{detailList.message}}</view>
+            </view>
+            <view class="bottom-detail">
+                <view class="bottom-detail-item">订单号：{{detailList.order_no||''}}</view>
+                <view class="bottom-detail-item">联系人：{{detailList.linkman||''}}</view>
+                <view class="bottom-detail-item">联系方式：{{detailList.phone||''}}</view>
+                <view class="bottom-detail-item">{{detailList.sendWord}}：{{detailList.address||''}}</view>
+                <view class="bottom-detail-item">就餐时间：{{detailList.send_date||''}} {{detailList.send_time||''}}</view>
+            </view>
+            <view class="order-secure" wx:if="{{detailList.insure==1}}">
+                <order-secure></order-secure>
+            </view>
+            <view class="bottom-order-again {{isIPhoneX?'padbom68':''}}">
+                <view bindtap="gotoKitchenDetail" class="order-again" data-kitchenid="{{detailList.kitchen_id}}">再次下单</view>
+            </view>
+        </view>
+    </view>
+    <view class="red-packet-mask" wx:if="{{isShowShareBtn||isShowRedGet}}"></view>
+    <view class="red-packet-main" wx:if="{{isShowShareBtn}}">
+        <image class="img-main" src="{{redImageUrl}}"></image>
+        <button class="btn-main" openType="share"></button>
+        <image bindtap="hideShare" class="img-close" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/red-close.png"></image>
+    </view>
+    <view class="red-packet-get" wx:if="{{isShowRedGet}}">
+        <view class="red-get-top">
+            <view class="red-get-title">获得1张优惠券，下次下单可用</view>
+            <view class="red-coupon">
+                <image class="coupon-bak" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/red-coupon.png"></image>
+                <view class="red-coupon-info">
+                    <view class="red-price">10<text>元</text>
+                    </view>
+                    <view class="red-coupon-title">
+                        <view class="red-c-t-main">两周年专享</view>
+                        <view class="r-c-t-s">天天领红包</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="red-get-bottom">我知道了</view>
+        <image bindtap="hideShare" class="img-close" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/red-close.png"></image>
+    </view>
+</view>

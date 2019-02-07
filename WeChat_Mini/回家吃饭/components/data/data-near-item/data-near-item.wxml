@@ -1,0 +1,43 @@
+<view bindtap="gotoKitchen" class="near-item-container" data-bookprice="{{nearItem.kitchenBookPrice}}" data-kitchenid="{{nearItem.kitchenID}}">
+    <view class="near-item-title">
+        <view class="near-title-left">
+            <view class="nt-text">
+        {{nearItem.kitchenTitle}}
+      </view>
+            <view class="nt-note" wx:if="{{nearItem.kitchenAlert}}">
+        {{nearItem.kitchenAlert}}
+      </view>
+            <view class="nt-info">
+        {{nearItem.kitchenInfo}}
+      </view>
+            <view class="nt-mark">
+                <user-zan zanText="{{item}}" wx:for="{{nearItem.kitchenTags}}" wx:key="item"></user-zan>
+            </view>
+        </view>
+        <view class="near-title-right">
+            <user-head headSrc="{{nearItem.kitchenHeadSrc}}" isBetter="{{nearItem.kitchenIsBetter}}" kitchenFlag="{{nearItem.kitchenFlag}}"></user-head>
+        </view>
+    </view>
+    <view class="near-scoll">
+        <scroll-view class="near-scoll-container" scrollLeft="0" scrollX="true">
+            <view class="near-scoll-item" wx:if="{{item}}" wx:for="{{nearItem.kitchenShowImgs}}" wx:key="item">
+                <view class="near-scoll-img">
+                    <image binderror="imgError" class="near-scoll-img" data-item="{{item}}" mode="aspectFill" src="{{item.url||defaultImg}}"></image>
+                    <view class="img-tags" wx:if="{{item.recommend_tag}}">{{item.recommend_tag}}</view>
+                </view>
+            </view>
+            <view class="near-scoll-item" wx:if="{{nearItem.kitchenShowImgs.length==0}}">
+                <image class="near-scoll-img" src="{{defaultImg}}"></image>
+            </view>
+            <view class="near-scoll-item" wx:if="{{nearItem.kitchenMoreDish}}">
+                <image class="near-scoll-more" mode="aspectFill" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/near-more.png"></image>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="near-bottom">
+        <view class="near-address">{{nearItem.kitchenLocation}}</view>
+        <view class="near-ticket">
+            <ticket-mark ticketImg="{{item.ticketImg}}" ticketText="{{item.ticketText}}" wx:for="{{nearItem.kitchenMarks}}" wx:key="item"></ticket-mark>
+        </view>
+    </view>
+</view>

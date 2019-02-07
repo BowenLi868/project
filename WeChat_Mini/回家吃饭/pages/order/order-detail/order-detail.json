@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "order-eating-way": "../../../components/order/order-eating-way/order-eating-way",
+        "mark": "../../../components/public/mark/mark",
+        "time": "../../../components/public/time/time",
+        "order-secure": "../../../components/order/order-secure/order-secure",
+        "loading": "../../../components/public/loading/loading"
+    }
+}

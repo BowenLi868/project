@@ -1,0 +1,11 @@
+{
+    "backgroundTextStyle": "light",
+    "usingComponents": {
+        "phone": "../../../components/share/phone/phone",
+        "rule": "../../../components/share/rule/rule",
+        "card": "../../../components/share/card/card",
+        "bottom": "../../../components/share/bottom/bottom",
+        "navbar": "../../../components/public/navbar/navbar",
+        "ticket-coupon": "../../../components/ticket/ticket-coupon/ticket-coupon"
+    }
+}

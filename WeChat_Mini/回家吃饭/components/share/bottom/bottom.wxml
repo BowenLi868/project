@@ -1,0 +1,4 @@
+<view class="bottom-container">
+    <image class="logo" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/hjcf-bottom.png"></image>
+    <text class="bottom-msg">此次活动最终解释权归回家吃饭所有</text>
+</view>

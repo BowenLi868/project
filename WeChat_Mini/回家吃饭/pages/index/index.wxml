@@ -1,0 +1,30 @@
+<view class="container">
+    <navigator class="location" url="/pages/location/location">
+        <image class="location-icon" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/location.png"></image>
+        <view class="location-text">{{locationText}}</view>
+    </navigator>
+    <view class="head-info">
+        <view class="left-info">
+            <view class="head-hi">{{headerInfo.title}}</view>
+            <view bindtap="gotoCenter" class="head-msg">{{headerInfo.describe}}</view>
+        </view>
+        <user-head bindtap="gotoCenter" class="right-info" headSize="144" headSrc="{{headerInfo.headSrc}}"></user-head>
+    </view>
+    <view class="near-container" wx:if="{{exceptionType==''}}">
+        <view class="near-list">
+            <view class="near-title">
+                <image class="near-icon" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/near-icon.png"></image>
+                <view class="near-title-text">附近厨房</view>
+            </view>
+            <data-near-item bind:gotoKitchen="gotoKitchen" nearItem="{{item}}" wx:for="{{nearKitchenList}}" wx:key="item"></data-near-item>
+        </view>
+    </view>
+    <view class="data-error" wx:if="{{exceptionType}}">
+        <data-exception exceptionType="{{exceptionType}}"></data-exception>
+    </view>
+</view>
+<view bindtap="gotoCenter" class="my-fixed">
+    <image class="my" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/my-empty.png"></image>
+</view>
+<floatImg bind:linkToCallBack="shareLinkCallback" isShow="{{hasShare}}" page="{{sharePage}}" src="{{shareSrc}}"></floatImg>
+<loading loaded="{{loaded}}"></loading>

@@ -1,0 +1,18 @@
+<view class="data-exception-container">
+    <image class="ex-icon {{exceptionType}}" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/{{exceptionType}}.png"></image>
+    <view class="ex-text" wx:if="{{exceptionType=='nokitchen'}}">
+        <text>附近没有厨房</text>
+        <text>敬请期待哦</text>
+    </view>
+    <view class="ex-text" wx:if="{{exceptionType=='unknow-city'}}">
+        <text>没有符合筛选条件的厨房</text>
+        <text>快来推荐适合的家厨吧</text>
+    </view>
+    <view class="ex-text" wx:if="{{exceptionType=='wifiless'}}">
+        <text>信号走丢了</text>
+        <text>当前网络异常</text>
+    </view>
+    <view class="ex-text" wx:if="{{exceptionType=='noaddress'}}">
+        <text>找不到任何相关地址信息</text>
+    </view>
+</view>

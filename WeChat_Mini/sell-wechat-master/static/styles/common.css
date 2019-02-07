@@ -1,0 +1,15 @@
+.clearfix{
+    display: inline-block;
+}
+.clearfix::after{
+    content:' ';
+    height: 0;
+    clear: both;
+    line-height: 0;
+    visibility: hidden;
+    display: block;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}

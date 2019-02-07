@@ -1,0 +1,31 @@
+.eating-way-container {
+    display: inline-flex;
+}
+
+.eating-way {
+    width: 125rpx;
+    height: 56rpx;
+    text-align: center;
+    line-height: 56rpx;
+    border: 1rpx solid #EE5A52;
+    color: #EE5A52;
+    font-size: 26rpx;
+}
+
+.eating-way:first-child {
+    border-radius: 10rpx 0 0 10rpx;
+}
+
+.eating-way:last-child {
+    border-radius: 0 10rpx 10rpx 0;
+}
+
+.eating-way.active {
+    background-color: #EE5A52;
+    color: #fff;
+}
+
+.disable {
+    border: 1rpx solid #D0D0D0;
+    color: #D0D0D0;
+}

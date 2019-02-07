@@ -1,0 +1,54 @@
+.pay-container {
+    padding: 0 30rpx;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 32rpx;
+}
+
+.pay-item {
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx solid #D0D0D0;
+}
+
+.money-title {
+    color: #EE5A52;
+    font-weight: 300;
+}
+
+.money {
+    color: #EE5A52;
+}
+
+.alipay-img {
+    width: 51rpx;
+    height: 43rpx;
+    margin-left: 30rpx;
+}
+
+.wx-img {
+    width: 52rpx;
+    height: 52rpx;
+    margin-left: 30rpx;
+}
+
+.item-left {
+    display: flex;
+    align-items: center;
+}
+
+.item-right {
+    width: 13rpx;
+    height: 23rpx;
+}
+
+.pay-text {
+    margin-left: 30rpx;
+}
+
+mark {
+    margin-left: 20rpx;
+}

@@ -1,0 +1,5 @@
+<view class="user-star-container">
+    <image class="user-star-icon" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/star.png" wx:for="{{starNum%1>0?starNum-1:starNum}}" wx:key="item"></image>
+    <image class="user-star-icon" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/star-half.png" wx:if="{{starNum%1>0}}"></image>
+    <image class="user-star-icon" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/empty-star.png" wx:for="{{starNum%1>0?4-starNum:5-starNum}}" wx:key="item"></image>
+</view>

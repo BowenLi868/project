@@ -1,0 +1,1 @@
+<view class="circle-container" style="background-color:#{{color}}">{{text}}</view>

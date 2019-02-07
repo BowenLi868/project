@@ -1,0 +1,40 @@
+<view class="user-container">
+    <view class="user-header">
+        <image class="user-back" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/user-back.png"></image>
+        <view class="user-head">
+            <user-head headSize="144" headSrc="{{headUrl}}"></user-head>
+            <view class="user-info">
+                <text class="user-name">{{userName}}</text>
+                <image class="user-sex" src="{{sexUrl}}" wx:if="{{sexUrl!=''}}"></image>
+            </view>
+        </view>
+        <view bindtap="logout" class="logout">
+            <image class="logout-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/logout.png"></image>
+            <text>退出登录</text>
+        </view>
+    </view>
+    <view class="user-coupon-main">
+        <view class="user-coupon">
+            <view class="user-coupon-text">我的优惠券</view>
+            <view bindtap="gotoMyCoupon" class="user-coupon-link">
+                <text class="coupon-text {{coupon_cnt?'':'nouseful'}}">{{coupon_cnt?coupon_cnt+'张可用':'无可用优惠券'}}</text>
+                <image class="coupon-text-sorr" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/arrow-right1.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="user-manage-title">
+        <view bindtap="switchManage" class="title-item {{manageType=='4'?'active':''}}" data-type="4">进行中</view>
+        <view bindtap="switchManage" class="title-item {{manageType=='5'?'active':''}}" data-type="5">待评价</view>
+        <view bindtap="switchManage" class="title-item {{manageType=='6'?'active':''}}" data-type="6">已完成</view>
+    </view>
+    <view class="user-manage-blank" wx:if="{{orderStatusList==''?true:false}}">
+        <image class="ship-blank" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/shipBlank.jpg"></image>  暂无订单</view>
+    <view class="user-manage-item" wx:for="{{orderStatusList}}" wx:key="item">
+        <user-manage-item itemData="{{item}}" manageType="{{manageType}}"></user-manage-item>
+    </view>
+    <view class="bottom-msg">
+        <view class="msg">联系客服 400-087-7700（每天9:00-20:00）</view>
+        <image class="logo-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/logo.png"></image>
+    </view>
+</view>
+<loading loaded="{{loaded}}"></loading>

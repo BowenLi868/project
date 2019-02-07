@@ -1,0 +1,156 @@
+.ticket-coupon-container {
+    width: 100%;
+    position: relative;
+}
+
+.ticket-card {
+    width: 100%;
+    height: 360rpx;
+}
+
+.ticket-main {
+    position: absolute;
+    top: 30rpx;
+    left: 30rpx;
+    padding-right: 60rpx;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.ticket-main-info {
+    font-size: 40rpx;
+    color: #EE5A52;
+    display: flex;
+    position: relative;
+    height: 160rpx;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.ticket-main-coupon {
+    font-size: 100rpx;
+    display: flex;
+    align-items: baseline;
+}
+
+.ticket-unit {
+    margin-left: 20rpx;
+    font-size: 30rpx;
+}
+
+.ticket-main-highline {
+    padding-top: 26rpx;
+    text-align: right;
+    color: #5D5D5D;
+}
+
+.hightext {
+    color: #909090;
+    font-size: 26rpx;
+}
+
+.ticket-main.unusable {
+    opacity: 0.6;
+}
+
+.ticket-main.unusable .ticket-main-info {
+    color: #EE5A52;
+}
+
+.ticket-main-warning {
+    margin-top: 15rpx;
+}
+
+.warning-li {
+    font-size: 26rpx;
+    color: #5D5D5D;
+}
+
+.ticket-main.over .warning-li {
+    color: #5D5D5D;
+}
+
+.ticket-main.unusable .warning-li {
+    color: #909090;
+}
+
+.ticket-has {
+    position: absolute;
+    top: 4rpx;
+    right: 6rpx;
+    width: 119rpx;
+    height: 119rpx;
+}
+
+.ticket-unusable {
+    position: relative;
+    margin: -48rpx 8rpx 0 8rpx;
+    min-height: 50rpx;
+    padding-left: 39rpx;
+    background-color: #F5F5F5;
+    border: 1rpx solid #E1E1E1;
+    border-top: 1rpx dashed #E1E1E1;
+    border-radius: 0 0 10rpx 10rpx;
+    z-index: 12;
+}
+
+.unusable-title {
+    color: #EE5A52;
+    font-size: 24rpx;
+    display: flex;
+    align-items: center;
+    height: 50rpx;
+    opacity: 0.6;
+}
+
+.reason-li {
+    color: #7A7A7A;
+    font-size: 24rpx;
+}
+
+.open-reason {
+    margin-left: 16rpx;
+    width: 14rpx;
+    height: 9rpx;
+}
+
+.ticket-unusable-reason {
+    margin: 13rpx 0 13rpx 0;
+    opacity: 0.6;
+}
+
+.frosen {
+    position: absolute;
+    top: 106rpx;
+    left: 50%;
+    margin-left: -267rpx;
+    width: 534rpx;
+    height: 153rpx;
+    font-size: 28rpx;
+    color: #ffffff;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+
+.frosen-mask {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 18;
+}
+
+.frosen-content {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10rpx;
+    color: #ffffff;
+    z-index: 19;
+}

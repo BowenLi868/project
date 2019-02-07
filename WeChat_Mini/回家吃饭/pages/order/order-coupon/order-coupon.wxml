@@ -1,0 +1,11 @@
+<view class="order-coupon-container">
+    <view class="magbtm20" wx:for="{{useList}}" wx:key="item">
+        <ticket-coupon bindtap="choseCoupon" data-item="{{item}}" ticketData="{{item}}"></ticket-coupon>
+    </view>
+    <view class="unusable-container" wx:if="{{unuseList.length}}">以下为不可用优惠券</view>
+    <view class="magbtm20" wx:for="{{unuseList}}" wx:key="item">
+        <ticket-coupon data-item="{{item}}" ticketData="{{item}}"></ticket-coupon>
+    </view>
+    <view class="no-data" wx:if="{{!useList.length&&!unuseList.length}}">暂无数据</view>
+</view>
+<view bindtap="donotUseCoupon" class="user-none">本次不使用优惠券</view>

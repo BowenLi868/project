@@ -1,0 +1,32 @@
+.ticket-container {
+    height: 30rpx;
+    display: inline-flex;
+    align-items: center;
+    font-size: 24rpx;
+}
+
+.ticket-container .ticket-type {
+    color: #EE5A52;
+    border: 1rpx solid #EE5A52;
+    height: 28rpx;
+    width: 28rpx;
+    line-height: 28rpx;
+    text-align: center;
+    border-radius: 6rpx;
+}
+
+.ticket-img {
+    width: 28rpx;
+    height: 28rpx;
+}
+
+.ticket-container .ticket-text {
+    color: #909090;
+    line-height: 30rpx;
+    padding-left: 10rpx;
+}
+
+.ticket-container .has {
+    background-color: #EE5A52;
+    color: #fff;
+}

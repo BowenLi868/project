@@ -1,0 +1,17 @@
+.bottom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 108rpx;
+    height: 30rpx;
+}
+
+.bottom-msg {
+    font-size: 18rpx;
+    color: #8E8E8E;
+    margin-top: 18rpx;
+}

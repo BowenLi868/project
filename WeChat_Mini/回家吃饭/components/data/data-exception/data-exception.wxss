@@ -1,0 +1,49 @@
+.data-exception-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.data-exception-container .ex-icon {
+    width: 255rpx;
+    height: 140rpx;
+    margin: 0 auto;
+}
+
+.data-exception-container .nokitchen {
+    width: 265rpx;
+    height: 119rpx;
+}
+
+.data-exception-container .unknow-city {
+    width: 255rpx;
+    height: 140rpx;
+}
+
+.data-exception-container .noaddress {
+    width: 262rpx;
+    height: 146rpx;
+}
+
+.data-exception-container .wifiless {
+    width: 196rpx;
+    height: 156rpx;
+}
+
+.data-exception-container .ex-text {
+    margin-top: 40rpx;
+    color: #909090;
+    font-size: 30rpx;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.ex-tj {
+    margin-top: 53rpx;
+    height: 66rpx;
+    line-height: 66rpx;
+    background-color: #fff;
+    border: 1px solid #EA4D45;
+    color: #EA4D45;
+    font-size: 26rpx;
+}

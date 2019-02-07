@@ -1,0 +1,27 @@
+<view class="item-container">
+    <image class="item-img" mode="aspectFill" src="{{item.cover_image_url||defaultImg}}"></image>
+    <view class="item-info">
+        <view class="head-img">
+            <user-head headSize="100" headSrc="{{item.cook_image_url}}"></user-head>
+        </view>
+        <view class="kitchen-member">
+            <view class="kitchen-name">
+                <view class="name-text">{{item.kitchen_name}}</view>
+            </view>
+            <view class="kitchen-cj">
+                <user-star starNum="{{item.star}}" wx:if="{{item.star}}"></user-star>
+                <view class="cj-text {{item.star?'':'mgl0'}}">{{item.star?item.star+'分':'暂无评分'}}·月售{{item.monthSale}}单</view>
+            </view>
+            <view class="place">
+                <view class="place-p">{{item.nativePlaceCity}}</view>
+                <view class="place-d">{{item.distance}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="note" wx:if="{{item.kitchen_description&&false}}">
+        <view class="note-img-container">
+            <image class="note-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/dish-note-img.png"></image>
+        </view>
+        <view class="note-text">{{item.kitchen_description}}</view>
+    </view>
+</view>

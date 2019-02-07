@@ -1,0 +1,42 @@
+{
+  "name": "sell-wechat-server",
+  "version": "1.0.0",
+  "description": "小迪外卖的后端程序",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -harmony app"
+  },
+  "keywords": [
+    "外卖",
+    "koa2",
+    "nodejs"
+  ],
+  "author": "wangdi",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.2.0",
+    "mongodb": "^2.2.25",
+    "mongoose": "^4.9.3",
+    "redis": "^2.7.1"
+  },
+  "devDependencies": {
+    "axios": "^0.16.1",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "bcrypt-nodejs": "^0.0.3",
+    "bluebird": "^3.5.0",
+    "crypto": "0.0.3",
+    "ioredis": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-convert": "^1.2.0",
+    "koa-router": "^7.1.1",
+    "koa-session2": "^2.2.3",
+    "koa-static": "^3.0.0",
+    "moment": "^2.10.6",
+    "object-assign": "^3.0.0",
+    "random-string": "^0.1.2",
+    "superagent": "^3.5.2",
+    "webpack": "^2.3.3"
+  }
+}

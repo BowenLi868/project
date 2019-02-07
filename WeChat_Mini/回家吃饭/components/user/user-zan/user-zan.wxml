@@ -1,0 +1,6 @@
+<view class="user-zan-container">
+    <view class="user-zan-icontainer">
+        <image class="user-zan-icon" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/icon-zan.png"></image>
+    </view>
+    <view class="user-zan-text">{{zanText}}</view>
+</view>

@@ -1,0 +1,3 @@
+<view class="loading-container {{loaded?'hidden':''}}">
+    <image class="loading-img" mode="aspectFill" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/loading.gif"></image>
+</view>

@@ -1,0 +1,30 @@
+<view class="share-container">
+    <view class="share-head">
+        <image class="share-head-img" mode="widthFix" src="{{pageData.headImg||'http://image.jiashuangkuaizi.com/image/wxapp/hjcf/share-head.png'}}"></image>
+    </view>
+    <view class="share-receive">
+        <view class="phone-content" wx:if="{{pageStatus=='INIT'}}">
+            <phone bind:receive="receive" phone="{{pageData.phone||''}}"></phone>
+        </view>
+        <view class="coupon-get" wx:if="{{pageStatus=='GET'}}">
+            <view class="ticket-coupon">
+                <ticket-coupon ticketData="{{couponData}}"></ticket-coupon>
+                <image class="get-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/share-ticket-get.png"></image>
+            </view>
+            <view bindtap="gotoIndex" class="packet-btn">马上使用</view>
+            <view class="re-info">
+        优惠券已放入账户：<text class="re-info-phone">{{pageData.phone}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="rule">
+        <rule rules="{{pageData.rules}}"></rule>
+    </view>
+    <view class="card">
+        <card></card>
+    </view>
+    <view class="bottom">
+        <bottom></bottom>
+    </view>
+</view>
+<navbar></navbar>

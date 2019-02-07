@@ -1,0 +1,225 @@
+page {
+    background-color: #F2F3F4;
+    height: 100%;
+}
+
+.hgt100 {
+    height: 100%;
+    padding-bottom: 2rpx;
+    border-bottom: 2rpx;
+    position: relative;
+}
+
+.order-main {
+    position: relative;
+}
+
+.order-detail-container {
+    background-color: #fff;
+    padding: 0 30rpx;
+    box-shadow: 0 0 5rpx rgba(76,76,76,0.15);
+}
+
+.eating-way {
+    padding-top: 41rpx;
+    padding-bottom: 41rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx solid #D0D0D0;
+}
+
+.eating-way-title {
+    font-size: 32rpx;
+    color: #333333;
+    font-weight: 300;
+}
+
+.order-address {
+    padding-top: 41rpx;
+    padding-bottom: 41rpx;
+    border-bottom: 1rpx solid #D0D0D0;
+}
+
+.order-chose {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chose-left {
+    color: #333333;
+    font-size: 32rpx;
+    font-weight: 300;
+}
+
+.chose-right {
+    color: #333333;
+    font-size: 28rpx;
+    display: flex;
+    align-items: center;
+}
+
+.address-guess {
+    color: #EE5A52;
+    font-size: 26rpx;
+}
+
+.right-sorr {
+    margin-left: 38rpx;
+    width: 11rpx;
+    height: 21rpx;
+}
+
+.order-show {
+    margin-top: 20rpx;
+    color: #909090;
+    font-size: 26rpx;
+}
+
+.order-message {
+    height: 26rpx;
+    line-height: 26rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.eating-time {
+    padding-top: 41rpx;
+    padding-bottom: 41rpx;
+}
+
+.margin-left14 {
+    margin-left: 14rpx;
+}
+
+.margin-top20 {
+    margin-top: 20rpx;
+}
+
+.color-red {
+    color: #EE5A52;
+}
+
+.color-grey {
+    color: #909090;
+}
+
+.order-item,.order-note,.order-yhq,.order-ticket {
+    padding-top: 41rpx;
+    padding-bottom: 41rpx;
+    border-bottom: 1rpx solid #D0D0D0;
+}
+
+.order-yhq {
+    border-bottom: none;
+}
+
+.order-ye {
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 26rpx;
+    color: #333333;
+    margin-top: 18rpx;
+}
+
+.detail-old-price {
+    color: #909090;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.detail-right {
+    display: flex;
+    justify-content: space-between;
+    width: 300rpx;
+}
+
+.font22 {
+    font-size: 22rpx;
+}
+
+.detail-item:first-child {
+    margin-top: 0;
+}
+
+.order-pay {
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pay-need {
+    color: #333333;
+    font-size: 34rpx;
+}
+
+.pay-yh {
+    color: #676767;
+    font-size: 24rpx;
+}
+
+.pay-btn {
+    width: 210rpx;
+    height: 80rpx;
+    border-radius: 10rpx;
+    color: #fff;
+    background-color: #EE5A52;
+    text-align: center;
+    line-height: 80rpx;
+    font-size: 30rpx;
+}
+
+.checkbox {
+    width: 36rpx;
+    height: 36rpx;
+    margin-left: 20rpx;
+}
+
+.gray {
+    opacity: 0.5;
+}
+
+.bottom-fixed {
+    background-color: #fff;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    box-shadow: 0rpx 0rpx 5rpx #aaa;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.padding-bottom20 {
+    padding-bottom: 20rpx;
+}
+
+.magbtm110 {
+    margin-bottom: 110rpx;
+}
+
+.magbtm178 {
+    margin-bottom: 178rpx;
+}
+
+.padbtm178 {
+    padding-bottom: 178rpx;
+}
+
+.padbtm110 {
+    padding-bottom: 110rpx;
+}

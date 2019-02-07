@@ -1,0 +1,50 @@
+<view class="my-coupon-main">
+    <view class="coupon-code">
+        <input class="cop-code-ipt" placeholder="请输入兑换码" placeholderClass="cop-code-pd" type="text"></input>
+        <text class="cop-code-btn">兑换</text>
+    </view>
+    <view class="ticket-main" wx:if="{{false}}">
+        <view class="tkt-title">
+            <view class="tkt-ttl-txt">家厨饭票</view>
+            <view bindtap="gotoOtdTicket" class="lk-otdate">
+                <view class="lk-otdt-txt">查看过期饭票</view>
+                <image src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/arrow-right1.png"></image>
+            </view>
+        </view>
+        <view class="ticket-list">
+            <view class="ticket-item" data-item="{{item}}" wx:for="{{ticketData}}" wx:key="item">
+                <ticket fromMy="{{true}}" ticketData="{{item}}"></ticket>
+            </view>
+        </view>
+        <view class="no-tkt" wx:if="{{ticketData.length==0}}">
+            <view class="blank">
+                <image src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/my-noticket.png"></image>
+                <view class="blank-txt">无可用饭票</view>
+            </view>
+        </view>
+    </view>
+    <view class="cop-main">
+        <view class="tkt-title">
+            <view class="tkt-ttl-txt">普通优惠券</view>
+            <view bindtap="gotoOtdCoupon" class="lk-otdate">
+                <view class="lk-otdt-txt">查看过期优惠券</view>
+                <image src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/arrow-right1.png"></image>
+            </view>
+        </view>
+        <view class="ticket-list">
+            <view class="ticket-item" data-item="{{item}}" wx:for="{{couponData}}" wx:key="item">
+                <coupon ticketData="{{item}}"></coupon>
+            </view>
+        </view>
+        <view class="no-tkt" wx:if="{{couponData.length==0}}">
+            <view class="blank">
+                <image src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/my-noticket.png"></image>
+                <view class="blank-txt">无可用优惠券</view>
+            </view>
+        </view>
+    </view>
+    <view class="btm-logo">
+        <image src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/comment-logo-detail.png"></image>
+    </view>
+</view>
+<loading loaded="{{loaded}}"></loading>

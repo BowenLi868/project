@@ -1,0 +1,439 @@
+[{
+  "_id": "58ef9e8e76c6b100ccf88045",
+  "address": "新塘路158号天虹购物中心",
+  "is_new": false,
+  "is_brand": false,
+  "id": "173150",
+  "name": "小胖餐饮（天虹店）",
+  "coordinate": [120.207372, 30.26409],
+  "order_lead_time": 35,
+  "phone": "86772926",
+  "delivery_fee": 5,
+  "minimum_order_amount": 20,
+  "image_path": "http://xiaodiwaimai.oss-cn-shenzhen.aliyuncs.com/7a33acc43759daaa1ed313a3958d0c0ejpeg.jpeg",
+  "promotion_info": "营业时间8:30-23:00一，亲 米饭是需要单点的哦！二，因雨雪天气配送时间延迟，请谅解！三， 因客户下单地址错误，电话错误，电话停机，电话关机，未联系商家，导致餐未收取，概不退款！欢迎顾客的光临！",
+  "rating": 4,
+  "recent_order_num": 9778,
+  "meta": {
+    "updateAt": "2017-04-13T15:51:42.029Z",
+    "createAt": "2017-04-13T15:51:42.029Z"
+  },
+  "supports": [{
+    "icon_color": "999999",
+    "icon_name": "保",
+    "description": "已加入“外卖保”计划，食品安全有保障"
+  }, {
+    "icon_color": "999999",
+    "icon_name": "票",
+    "description": "该商家支持开发票，开票订单金额100.0元起，请在下单时填写好发票抬头"
+  }, {
+    "icon_color": "57A9FF",
+    "icon_name": "准",
+    "description": "准时必达，超时秒赔"
+  }],
+  "opening_hours": ["00:00/24:00"],
+  "activities": [{
+    "icon_color": "70bc46",
+    "icon_name": "新",
+    "description": "新用户下单立减20.0元"
+  }, {
+    "icon_color": "f07373",
+    "icon_name": "减",
+    "description": "满29减19，满48减27，满120减43，满200减102"
+  }, {
+    "icon_color": "f07373",
+    "icon_name": "特",
+    "description": "小胖餐饮"
+  }, {
+    "icon_color": "f07373",
+    "icon_name": "特",
+    "description": "小胖餐饮"
+  }, {
+    "icon_color": "f1884f",
+    "icon_name": "特",
+    "description": "小胖餐饮"
+  }],
+  "__v": 0,
+  "distance": 0
+}, {
+  "_id": "58ef9e9076c6b100ccf8872a",
+  "address": "凤起东路187号",
+  "is_new": false,
+  "is_brand": false,
+  "id": "202506",
+  "name": "红旗饭店",
+  "coordinate": [120.207549, 30.26392],
+  "order_lead_time": 33,
+  "phone": "18969906448",
+  "delivery_fee": 5,
+  "minimum_order_amount": 20,
+  "image_path": "http://xiaodiwaimai.oss-cn-shenzhen.aliyuncs.com/b12c1cc386abdc07135a8b1dc0691ca3jpeg.jpeg",
+  "promotion_info": "欢迎光临红旗饭店",
+  "rating": 3.7,
+  "recent_order_num": 1101,
+  "meta": {
+    "updateAt": "2017-04-13T15:51:44.095Z",
+    "createAt": "2017-04-13T15:51:44.095Z"
+  },
+  "supports": [{
+    "icon_color": "999999",
+    "icon_name": "保",
+    "description": "已加入“外卖保”计划，食品安全有保障"
+  }, {
+    "icon_color": "999999",
+    "icon_name": "票",
+    "description": "该商家支持开发票，开票订单金额100.0元起，请在下单时填写好发票抬头"
+  }, {
+    "icon_color": "57A9FF",
+    "icon_name": "准",
+    "description": "准时必达，超时秒赔"
+  }],
+  "opening_hours": ["00:00/24:00"],
+  "activities": [{
+    "icon_color": "70bc46",
+    "icon_name": "新",
+    "description": "新用户下单立减20.0元"
+  }, {
+    "icon_color": "f07373",
+    "icon_name": "减",
+    "description": "满20减10，满50减15"
+  }, {
+    "icon_color": "f07373",
+    "icon_name": "特",
+    "description": "红旗饭店"
+  }, {
+    "icon_color": "f1884f",
+    "icon_name": "特",
+    "description": "红旗饭店"
+  }],
+  "__v": 0,
+  "distance": 25.450760827137454
+}, {
+  "_id": "58ef9e8e76c6b100ccf8808c",
+  "address": "新塘路108号",
+  "is_new": false,
+  "is_brand": false,
+  "id": "721768",
+  "name": "阿英美食（新塘店）",
+  "coordinate": [120.208209, 30.26422],
+  "order_lead_time": 31,
+  "phone": "15715715966",
+  "delivery_fee": 5,
+  "minimum_order_amount": 20,
+  "image_path": "http://xiaodiwaimai.oss-cn-shenzhen.aliyuncs.com/60298efec726e287611158cfbeb161f1jpeg.jpeg",
+  "promotion_info": "欢迎光临",
+  "rating": 4.1,
+  "recent_order_num": 930,
+  "meta": {
+    "updateAt": "2017-04-13T15:51:42.244Z",
+    "createAt": "2017-04-13T15:51:42.244Z"
+  },
+  "supports": [{
+    "icon_color": "999999",
+    "icon_name": "保",
+    "description": "已加入“外卖保”计划，食品安全有保障"
+  }, {
+    "icon_color": "999999",
+    "icon_name": "票",
+    "description": "该商家支持开发票，开票订单金额100.0元起，请在下单时填写好发票抬头"
+  }, {
+    "icon_color": "57A9FF",
+    "icon_name": "准",
+    "description": "准时必达，超时秒赔"
+  }],
+  "opening_hours": ["00:00/24:00"],
+  "activities": [{
+    "icon_color": "70bc46",
+    "icon_name": "新",
+    "description": "新用户下单立减20.0元"
+  }, {
+    "icon_color": "f07373",
+    "icon_name": "减",
+    "description": "满25减18，满55减28，满100减50，满198减80"
+  }, {
+    "icon_color": "f1884f",
+    "icon_name": "特",
+    "description": "大优惠"
+  }, {
+    "icon_color": "f07373",
+    "icon_name": "特",
+    "description": "阿英美食特大优惠"
+  }],
+  "__v": 0,
+  "distance": 81.76611134515191
+}, {
+  "_id": "58ef9e9076c6b100ccf8874e",
+  "address": "杭州市江干区顺福路303号中豪五福天地商业用房地下一层下沉式广场A3-A4",
+  "is_new": false,
+  "is_brand": false,
+  "id": "1556594",
+  "name": "川娃子",
+  "coordinate": [120.209754, 30.264702],
+  "order_lead_time": 28,
+  "phone": "0571-87009095",
+  "delivery_fee": 5,
+  "minimum_order_amount": 20,
+  "image_path": "http://xiaodiwaimai.oss-cn-shenzhen.aliyuncs.com/b3b5358286704da1e2ef7911aa1da102png.png",
+  "promotion_info": "新店开张 欢迎新老顾客！",
+  "rating": 3.6,
+  "recent_order_num": 58,
+  "meta": {
+    "updateAt": "2017-04-13T15:51:44.104Z",
+    "createAt": "2017-04-13T15:51:44.104Z"
+  },
+  "supports": [{
+    "icon_color": "999999",
+    "icon_name": "保",
+    "description": "已加入“外卖保”计划，食品安全有保障"
+  }, {
+    "icon_color": "999999",
+    "icon_name": "票",
+    "description": "该商家支持开发票，开票订单金额200.0元起，请在下单时填写好发票抬头"
+  }, {
+    "icon_color": "57A9FF",
+    "icon_name": "准",
+    "description": "准时必达，超时秒赔"
+  }],
+  "opening_hours": ["10:00/24:00"],
+  "activities": [{
+    "icon_color": "70bc46",
+    "icon_name": "新",
+    "description": "新用户下单立减20.0元"
+  }, {
+    "icon_color": "f07373",
+    "icon_name": "减",
+    "description": "满30减1，满100减5"
+  }],
+  "__v": 0,
+  "distance": 238.94044783346743
+}, {
+  "_id": "58ef9e8e76c6b100ccf88078",
+  "address": "江干区顺福路303号中豪五福天地商业中心综合商业用房地下一层下沉式广场B4",
+  "is_new": false,
+  "is_brand": false,
+  "id": "1443721",
+  "name": "小杭州石锅鱼（天虹店）",
+  "coordinate": [120.210183, 30.264218],
+  "order_lead_time": 33,
+  "phone": "86852182",
+  "delivery_fee": 5,
+  "minimum_order_amount": 20,
+  "image_path": "http://xiaodiwaimai.oss-cn-shenzhen.aliyuncs.com/f44b9c6c90a12ba5fe826ea591cc783ejpeg.jpeg",
+  "promotion_info": "亲！米饭单点噢！在主食里面！！！！本店营业时间已更改（9：00～00：00）堂食也一样，欢迎新老顾客光临！",
+  "rating": 4,
+  "recent_order_num": 1386,
+  "meta": {
+    "updateAt": "2017-04-13T15:51:42.234Z",
+    "createAt": "2017-04-13T15:51:42.234Z"
+  },
+  "supports": [{
+    "icon_color": "999999",
+    "icon_name": "保",
+    "description": "已加入“外卖保”计划，食品安全有保障"
+  }, {
+    "icon_color": "57A9FF",
+    "icon_name": "准",
+    "description": "准时必达，超时秒赔"
+  }],
+  "opening_hours": ["00:00/24:00"],
+  "activities": [{
+    "icon_color": "70bc46",
+    "icon_name": "新",
+    "description": "新用户下单立减20.0元"
+  }, {
+    "icon_color": "f07373",
+    "icon_name": "减",
+    "description": "满30减20，满50减30"
+  }],
+  "__v": 0,
+  "distance": 270.6454429441937
+}, {
+  "_id": "58ef9e9276c6b100ccf8933a",
+  "address": "杭州市江干区新塘路108号天虹购物中心B座一、二层（135.201）室）",
+  "is_new": false,
+  "is_brand": false,
+  "id": "777977",
+  "name": "龙虾壹号NO.1旗舰店",
+  "coordinate": [120.210085, 30.264794],
+  "order_lead_time": 39,
+  "phone": "15058683929",
+  "delivery_fee": 22,
+  "minimum_order_amount": 0,
+  "image_path": "http://xiaodiwaimai.oss-cn-shenzhen.aliyuncs.com/37cd846b8ccdeaa2ff8c1d5d2484ffa7jpeg.jpeg",
+  "promotion_info": "龙虾壹号郑重承诺:本餐厅所有菜品保证当天采购，绝对新鲜！所有菜品为保证新鲜，全部现做现烧！庆祝2号店营业，微信点餐0.88折，好评在返现8.88元！！",
+  "rating": 3.8,
+  "recent_order_num": 72,
+  "meta": {
+    "updateAt": "2017-04-13T15:51:46.999Z",
+    "createAt": "2017-04-13T15:51:46.999Z"
+  },
+  "supports": [{
+    "icon_color": "999999",
+    "icon_name": "票",
+    "description": "该商家支持开发票，开票订单金额200.0元起，请在下单时填写好发票抬头"
+  }],
+  "opening_hours": ["15:30/04:00"],
+  "activities": [{
+    "icon_color": "70bc46",
+    "icon_name": "新",
+    "description": "新用户下单立减20.0元"
+  }, {
+    "icon_color": "f07373",
+    "icon_name": "减",
+    "description": "满68减8，满128减18，满198减28"
+  }, {
+    "icon_color": "3cc791",
+    "icon_name": "赠",
+    "description": "满128.0元赠送花甲1份，满198.0元赠送豆腐鱼1份，满68.0元赠送可乐or雪碧1份"
+  }],
+  "__v": 0,
+  "distance": 272.36505105755697
+}, {
+  "_id": "58ef9e9076c6b100ccf88730",
+  "address": "顺福路303号中豪五福天地商业中心综合商业用房地下一层下沉式广场",
+  "is_new": true,
+  "is_brand": false,
+  "id": "151687487",
+  "name": "望江门金牌龙虾(天虹店）",
+  "coordinate": [120.210654, 30.264539],
+  "order_lead_time": 27,
+  "phone": "86852182",
+  "delivery_fee": 5,
+  "minimum_order_amount": 20,
+  "image_path": "http://xiaodiwaimai.oss-cn-shenzhen.aliyuncs.com/e20e90b5fd828d797a5490427f239861jpeg.jpeg",
+  "promotion_info": "",
+  "rating": 4.8,
+  "recent_order_num": 20,
+  "meta": {
+    "updateAt": "2017-04-13T15:51:44.097Z",
+    "createAt": "2017-04-13T15:51:44.097Z"
+  },
+  "supports": [{
+    "icon_color": "999999",
+    "icon_name": "保",
+    "description": "已加入“外卖保”计划，食品安全有保障"
+  }, {
+    "icon_color": "999999",
+    "icon_name": "票",
+    "description": "该商家支持开发票，开票订单金额180.0元起，请在下单时填写好发票抬头"
+  }, {
+    "icon_color": "57A9FF",
+    "icon_name": "准",
+    "description": "准时必达，超时秒赔"
+  }],
+  "opening_hours": ["00:00/24:00"],
+  "activities": [{
+    "icon_color": "f07373",
+    "icon_name": "减",
+    "description": "满48减8，满88减18，满158减28"
+  }],
+  "__v": 0,
+  "distance": 319.4888969364289
+}, {
+  "_id": "58ef9e9476c6b100ccf89b60",
+  "address": "浙江省杭州市下城区中山北路",
+  "is_new": false,
+  "is_brand": false,
+  "id": "1040610",
+  "name": "实惠超市",
+  "coordinate": [120.205019200063, 30.2664209538214],
+  "order_lead_time": 26,
+  "phone": "057186975636",
+  "delivery_fee": 0,
+  "minimum_order_amount": 20,
+  "image_path": "http://xiaodiwaimai.oss-cn-shenzhen.aliyuncs.com/ed29fb6ab94c95e09a87c945d0e4347bjpeg.jpeg",
+  "promotion_info": "本店24小时营业，下单马上发货，没有的可电话联系。 帮您代送所有物品客服TEL：0571-85055323 投诉及建议TEL：17706716717",
+  "rating": 4.7,
+  "recent_order_num": 1389,
+  "meta": {
+    "updateAt": "2017-04-13T15:51:48.875Z",
+    "createAt": "2017-04-13T15:51:48.875Z"
+  },
+  "supports": [{
+    "icon_color": "999999",
+    "icon_name": "票",
+    "description": "该商家支持开发票，开票订单金额100.0元起，请在下单时填写好发票抬头"
+  }],
+  "opening_hours": ["00:00/24:00"],
+  "activities": [{
+    "icon_color": "70bc46",
+    "icon_name": "新",
+    "description": "新用户下单立减20.0元"
+  }, {
+    "icon_color": "f07373",
+    "icon_name": "减",
+    "description": "满35减3，满55减7，满99减10"
+  }, {
+    "icon_color": "3cc791",
+    "icon_name": "赠",
+    "description": "满69.0元赠送旺仔牛奶1份"
+  }],
+  "__v": 0,
+  "distance": 344.24069117403644
+}, {
+  "_id": "58ef9e9076c6b100ccf88734",
+  "address": "浙江省杭州市江干区太平门直街",
+  "is_new": false,
+  "is_brand": false,
+  "id": "1049482",
+  "name": "重庆鸡公煲(太平门直街店)",
+  "coordinate": [120.209588, 30.261042],
+  "order_lead_time": 24,
+  "phone": "18667191099",
+  "delivery_fee": 5,
+  "minimum_order_amount": 20,
+  "image_path": "http://xiaodiwaimai.oss-cn-shenzhen.aliyuncs.com/b5cc17b7c692c09c1f27490bf64c1547jpeg.jpeg",
+  "promotion_info": "",
+  "rating": 4.2,
+  "recent_order_num": 443,
+  "meta": {
+    "updateAt": "2017-04-13T15:51:44.098Z",
+    "createAt": "2017-04-13T15:51:44.098Z"
+  },
+  "supports": [{
+    "icon_color": "999999",
+    "icon_name": "保",
+    "description": "已加入“外卖保”计划，食品安全有保障"
+  }, {
+    "icon_color": "57A9FF",
+    "icon_name": "准",
+    "description": "准时必达，超时秒赔"
+  }],
+  "opening_hours": ["10:00/03:00"],
+  "activities": [{
+    "icon_color": "70bc46",
+    "icon_name": "新",
+    "description": "新用户下单立减20.0元"
+  }, {
+    "icon_color": "f07373",
+    "icon_name": "减",
+    "description": "满30减12，满50减20，满80减30"
+  }],
+  "__v": 0,
+  "distance": 400.65129022183555
+}, {
+  "_id": "58ef9e9076c6b100ccf88741",
+  "address": "顺福路391号",
+  "is_new": false,
+  "is_brand": false,
+  "id": "147040381",
+  "name": "三毛海鲜烧烤吧",
+  "coordinate": [120.210989, 30.265946],
+  "order_lead_time": 0,
+  "phone": "15336577900",
+  "delivery_fee": 7,
+  "minimum_order_amount": 45,
+  "image_path": "http://xiaodiwaimai.oss-cn-shenzhen.aliyuncs.com/3336635712eccaffeb6157341df558cbjpeg.jpeg",
+  "promotion_info": "",
+  "rating": 0,
+  "recent_order_num": 12,
+  "meta": {
+    "updateAt": "2017-04-13T15:51:44.101Z",
+    "createAt": "2017-04-13T15:51:44.101Z"
+  },
+  "supports": [],
+  "opening_hours": ["18:00/01:35"],
+  "activities": [],
+  "__v": 0,
+  "distance": 404.5059032327107
+}]

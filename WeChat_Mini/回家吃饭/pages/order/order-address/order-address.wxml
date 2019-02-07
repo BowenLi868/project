@@ -1,0 +1,40 @@
+<view class="order-address-container">
+    <view bind:longpress="removeTap" class="address-item" data-item="{{item}}" wx:for="{{usefulList}}" wx:key="item">
+        <view bindtap="chooseAddress" class="address-radio" data-item="{{item}}">
+            <image class="radio" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/radio-chose{{item.isChosed?'d':''}}.png"></image>
+        </view>
+        <view bindtap="chooseAddress" class="address-info" data-item="{{item}}">
+            <view>{{item.name}} {{item.phone}}</view>
+            <view class="address-text">
+                <view class="address-text-info">{{item.address}}</view>
+                <view class="mark-container">
+                    <mark markText="{{item.typeName}}" markType="red" wx:if="{{item.typeName}}"></mark>
+                </view>
+            </view>
+        </view>
+        <view bindtap="editAddress" class="address-edit" data-item="{{item}}">
+            <image class="address-edit-icon" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/address-edit.png"></image>
+        </view>
+    </view>
+    <view class="address-out-title" wx:if="{{unUsefulList.length!=0}}">超出配送范围地址
+  </view>
+    <view bind:longpress="removeTap" class="address-item out" data-item="{{item}}" wx:for="{{unUsefulList}}" wx:key="item">
+        <view bindtap="unusefulTap" class="address-radio">
+            <image class="radio" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/radio-chose.png"></image>
+        </view>
+        <view bindtap="unusefulTap" class="address-info">
+            <view>{{item.name}} {{item.phone}}</view>
+            <view class="address-text">
+                <view class="address-text-info">{{item.address}}{{item.detailed_address}}</view>
+                <view class="mark-container">
+                    <mark markText="{{item.typeName}}" markType="red" wx:if="{{item.typeName}}"></mark>
+                </view>
+            </view>
+        </view>
+        <view bindtap="editAddress" class="address-edit" data-item="{{item}}">
+            <image class="address-edit-icon" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/address-edit.png"></image>
+        </view>
+    </view>
+    <view bindtap="addAddress" class="red-btn">添加新地址</view>
+</view>
+<loading loaded="{{loaded}}"></loading>

@@ -1,0 +1,19 @@
+<view class="ticket-detail-container">
+    <view bindtap="closeTicketDetail" class="detail-mask"></view>
+    <view class="tickets-main">
+        <view class="main-title">
+            <view class="ticket-note">
+        领取家厨饭票
+        <view class="ticket-qs-container"></view>
+            </view>
+            <view bindtap="closeTicketDetail" class="ticket-close-container">
+                <image class="ticket-detail-close" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/close.png"></image>
+            </view>
+        </view>
+        <ticket-card bind:choseTicket="choseTicket" ticketData="{{item}}" wx:for="{{ticketsData}}" wx:key="item"></ticket-card>
+        <view wx:if="">
+            <view class="unusable-container">以下为不可用饭票</view>
+            <ticket-card ticketData="{{unusableData}}"></ticket-card>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,6 @@
+<view class="user-head-contanier" style="width:{{headSize}}rpx;">
+    <image binderror="imgError" class="user-head-img{{headSize}}delete" mode="aspectFill" src="{{errorImg||headSrc||defaultImg}}" style="width:{{headSize}}rpx;height:{{headSize}}rpx;border-radius:{{headSize/2}}rpx;"></image>
+    <view class="user-is-better" wx:if="{{kitchenFlag}}">
+        <image class="user-better-text" src="{{kitchenFlag}}"></image>
+    </view>
+</view>

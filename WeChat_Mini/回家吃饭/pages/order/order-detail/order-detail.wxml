@@ -1,0 +1,142 @@
+<view class="{{isShowTime?'page-fixed':'hgt100'}}">
+    <view class="order-main  {{isShowTime?'page-fixed':''}} {{isIPhoneX?'padbtm178':'padbtm110'}}">
+        <view class="order-detail-container">
+            <view class="eating-way">
+                <view class="eating-way-title">就餐方式</view>
+                <view>
+                    <order-eating-way bind:switchWay="switchWay" currentWay="{{eatingType}}" eatingType="{{preCheckData.kitchen}}"></order-eating-way>
+                </view>
+            </view>
+            <view bindtap="choseAddress" class="order-address">
+                <view class="order-chose">
+                    <view class="chose-left">
+                        <text wx:if="{{eatingType==0||eatingType==1}}">送餐地址</text>
+                        <text wx:if="{{eatingType==2}}">取餐地址</text>
+                        <text wx:if="{{eatingType==3}}">就餐地址</text>
+                        <text class="address-guess" wx:if="{{orderAddress.isRecommend&&eatingType==0}}">［猜你想送至］</text>
+                    </view>
+                    <view class="chose-right">
+                        <mark markText="{{orderAddress.typeName}}" markType="red" wx:if="{{orderAddress.typeName}}"></mark>
+                        <text class="color-grey" wx:if="{{!orderAddress.address&&preCheckData.kitchen.is_distr}}">请添加</text>
+                        <text class="color-grey" wx:if="{{eatingType==0&&!preCheckData.kitchen.is_distr}}">厨房不支持配送，请选择其他就餐方式</text>
+                        <image class="right-sorr" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/sorr-right.png" wx:if="{{(eatingType==0||eatingType==1)&&preCheckData.kitchen.is_distr}}"></image>
+                    </view>
+                </view>
+                <view class="order-show" wx:if="{{orderAddress.address}}">
+                    <view>{{orderAddress.linkman+' '+orderAddress.phone}}</view>
+                    <view>{{orderAddress.address}}</view>
+                </view>
+            </view>
+            <view bindtap="choseTime" class="eating-time">
+                <view class="order-chose">
+                    <view class="chose-left">
+                        <text>就餐时间</text>
+                    </view>
+                    <view class="chose-right">
+                        <text wx:if="{{orderTime.time}}">{{orderTime.day}}{{orderTime.time}}</text>
+                        <mark class="margin-left14" markText="{{orderTime.text}}" markType="red" wx:if="{{orderTime.text}}"></mark>
+                        <text class="color-grey" wx:if="{{!orderTime.time}}">请选择</text>
+                        <image class="right-sorr" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/sorr-right.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="order-detail-container margin-top20">
+            <view bindtap="choseMessage" class="order-note">
+                <view class="order-chose">
+                    <view class="chose-left">
+                        <text>给厨房捎句话</text>
+                    </view>
+                    <view class="chose-right">
+                        <image class="right-sorr" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/sorr-right.png"></image>
+                    </view>
+                </view>
+                <view class="order-show">
+                    <view class="order-message">{{orderMessage||'忌口、要求和用餐人数（选填）'}}</view>
+                </view>
+            </view>
+            <view bindtap="choseCoupon" class="order-yhq">
+                <view class="order-chose">
+                    <view class="chose-left">
+                        <text>优惠券</text>
+                    </view>
+                    <view class="chose-right">
+                        <text class="color-grey" wx:if="{{eatingType==0&&(!orderAddress.address||!orderTime.time)}}">请先选择就餐地址和时间</text>
+                        <text class="color-grey" wx:if="{{eatingType!=0&&!orderTime.time}}">请先选择就餐时间</text>
+                        <text class="color-{{!preCheckData.coupon.coupon_usable?'grey':'red'}}" wx:if="{{eatingType==0&&orderAddress.address&&orderTime.time||eatingType!=0&&orderTime.time}}">{{preCheckData.coupon.coupon_usable?preCheckData.coupon.coupon_tip:'无优惠券可用'}}</text>
+                        <image class="right-sorr" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/sorr-right.png"></image>
+                    </view>
+                </view>
+            </view>
+            <view bindtap="choseTicket" class="order-ticket" wx:if="">
+                <view class="order-chose">
+                    <view class="chose-left">
+                        <text>家厨饭票</text>
+                    </view>
+                    <view class="chose-right">
+                        <text class="color-grey" wx:if="{{eatingType==0&&(!orderAddress.address||!orderTime.time)}}">请先选择就餐地址和时间</text>
+                        <text class="color-{{!preCheckData.ticket.ticket_usable?'grey':'red'}}" wx:if="{{eatingType!=0||orderAddress.address&&orderTime.time}}">{{preCheckData.ticket.ticket_usable?preCheckData.ticket.ticket_tip:'无饭票可用'}}</text>
+                        <image class="right-sorr" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/sorr-right.png"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="order-ye" wx:if="">
+                <view class="order-chose">
+                    <view class="chose-left">
+                        <text>使用余额</text>
+                    </view>
+                    <view class="chose-right">
+                        <text class="color-red">{{preCheckData.balance||0}}元</text>
+                        <image bindtap="switchUseExtra" class="checkbox" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/check{{isUseExtra?'ed':''}}.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="order-detail-container margin-top20 padding-bottom20">
+            <view class="order-item">
+                <view class="detail-item" wx:for="{{preCheckData.food_list}}" wx:key="item">
+                    <view class="detail-title">{{item.food_name}}</view>
+                    <view class="detail-right">
+                        <view class="detail-old-price">
+                            <text wx:if="{{item.food_id}}">
+                                <text class="{{item.special_dish?'line-through':''}}">￥{{item.original_price}}</text>X{{item.food_num}}</text>
+                        </view>
+                        <view class="detail-price">￥{{item.food_price*item.food_num}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="order-item">
+                <view class="detail-item" wx:for="{{preCheckData.extra_fee}}" wx:key="item">
+                    <view class="detail-title">
+                        <view>{{item.name}}</view>
+                        <view class="color-grey font22" wx:if="{{item.msg}}">调价原因：{{item.msg}}</view>
+                    </view>
+                    <view class="detail-price">￥{{item.value}}</view>
+                </view>
+            </view>
+            <view class="order-item" wx:if="{{preCheckData.order_fee_list.length}}">
+                <view class="detail-item" wx:for="{{preCheckData.order_fee_list}}" wx:key="item">
+                    <view class="detail-title">{{item.name}}</view>
+                    <view class="detail-price color-red">{{item.value}}</view>
+                </view>
+            </view>
+            <view class="detail-item" wx:if="{{preCheckData.insure}}">
+                <order-secure text="{{preCheckData.insure_msg}}"></order-secure>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="order-detail-container bottom-fixed ">
+    <view class="order-pay {{isIPhoneX?'padbom68':''}}">
+        <view class="pay-price">
+            <view class="pay-need">
+                <text>还需支付 </text>
+                <text class="color-red">￥{{preCheckData.to_pay_fee||0}}</text>
+            </view>
+            <view class="pay-yh" wx:if="{{preCheckData.concession_fee}}">已优惠：￥{{preCheckData.concession_fee||0}}</view>
+        </view>
+        <view bindtap="pay" class="pay-btn">去支付</view>
+    </view>
+</view>
+<time bind:cancleHandle="cancleTime" bind:saveHandle="saveTime" timeData="{{timeData}}" wx:if="{{isShowTime}}"></time>
+<loading loaded="{{loaded}}"></loading>

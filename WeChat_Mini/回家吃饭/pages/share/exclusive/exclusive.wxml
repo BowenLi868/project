@@ -1,0 +1,52 @@
+<view class="share-container">
+    <view class="share-head">
+        <image class="share-head-img" mode="widthFix" src="{{pageData.headImg||'http://image.jiashuangkuaizi.com/image/wxapp/hjcf/exclusive-head.png'}}"></image>
+        <view bindtap="switchRule" class="rules">
+            <text class="rule-title">活动规则</text>
+        </view>
+    </view>
+    <view class="share-receive">
+        <view class="phone-content" wx:if="{{pageStatus=='INIT'}}">
+            <view bindtap="receive" class="giver-coupon">
+                <image class="coupon-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/pgy-coupon.png"></image>
+                <view class="coupon-info">
+                    <view class="coupon-head">
+                        <view class="coupon-price">
+                            <text class="coupon-price-num">30</text>
+                            <view class="coupon-price-right">
+                                <text class="coupon-price-unit title">新人尝鲜券</text>
+                                <text class="coupon-price-unit">元.券包</text>
+                            </view>
+                        </view>
+                        <view class="coupon-title">点击领取</view>
+                    </view>
+                    <view class="coupon-note">{{'新人专享福利，快来领取吧'}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="coupon-get" wx:if="{{pageStatus=='GET'}}">
+            <view bindtap="gotoIndex" class="packet-btn">马上使用</view>
+            <view class="re-info">
+        优惠券已放入账户：<text class="re-info-phone">{{pageData.phone}}</text>
+            </view>
+            <view class="ticket-coupon" wx:for="{{couponData}}" wx:key="item">
+                <ticket-coupon ticketData="{{item}}"></ticket-coupon>
+                <image class="get-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/share-ticket-get.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="bottom">
+        <bottom></bottom>
+    </view>
+    <view class="mask" wx:if="{{isShowRules}}">
+        <view class="mask-back"></view>
+        <view class="rules-container">
+            <image class="rule-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/rule-float.png"></image>
+            <scroll-view class="rule-ctn" scrollY="{{true}}">
+                <view class="rule-item" wx:for="{{pageData.rules}}" wx:key="item">{{item}}</view>
+            </scroll-view>
+            <view bindtap="switchRule" class="rule-ctn-btn">确认</view>
+        </view>
+    </view>
+</view>
+<navbar></navbar>

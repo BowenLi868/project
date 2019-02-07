@@ -1,0 +1,14 @@
+{
+    "usingComponents": {
+        "user-head": "../../../components/user/user-head/user-head",
+        "user-star": "../../../components/user/user-star/user-star",
+        "kitchen-tag": "../../../components/kitchen/kitchen-tag/kitchen-tag",
+        "kitchen-mini-ticket": "../../../components/kitchen/kitchen-mini-ticket/kitchen-mini-ticket",
+        "kitchen-dish-item": "../../../components/kitchen/kitchen-dish-item/kitchen-dish-item",
+        "kitchen-shopping-cart": "../../../components/kitchen/kitchen-shopping-cart/kitchen-shopping-cart",
+        "kitchen-comment-item": "../../../components/kitchen/kitchen-comment-item/kitchen-comment-item",
+        "kitchen-ticket-detail": "../../../components/kitchen/kitchen-ticket-detail/kitchen-ticket-detail",
+        "navbar": "../../../components/public/navbar/navbar",
+        "loading": "../../components/public/loading/loading"
+    }
+}

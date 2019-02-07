@@ -1,0 +1,37 @@
+{
+    "pages":[
+        "shop/index/index",
+        "member/index/index",
+        "order/list/list",
+        "order/remark/remark",
+        "order/checkout/checkout",
+        "address/list/list",
+        "address/add/add",
+        "address/search/search",
+        "order/detail/detail"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#0099ff",
+        "navigationBarTitleText": "灵犀外卖",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar":{
+        "selectedColor": "#0099ff",
+        "list":[{
+                "pagePath":"shop/index/index",
+                "iconPath":"images/icon_home.png",
+                "selectedIconPath":"images/icon_home_selected.png",
+                "text":"外卖"
+            },{
+                "pagePath":"order/list/list",
+                "iconPath":"images/icon_cate.png",
+                "selectedIconPath":"images/icon_cate_selected.png",
+                "text":"订单"
+            },{
+                "pagePath":"member/index/index",
+                "iconPath":"images/icon_member.png",
+                "selectedIconPath":"images/icon_member_selected.png",
+                "text":"我的"
+            }]
+    }
+}

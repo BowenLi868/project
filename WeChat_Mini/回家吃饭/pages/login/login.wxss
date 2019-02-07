@@ -1,0 +1,73 @@
+page {
+    height: 100%;
+}
+
+.login-container {
+    padding: 74rpx 50rpx 0 50rpx;
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.input-box {
+    border-bottom: 1rpx solid #D0D0D0;
+    margin-top: 30rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.phone-box {
+    height: 95rpx;
+}
+
+.vlcode-box {
+    height: 111rpx;
+}
+
+.input-in {
+    height: 36rpx;
+    font-size: 36rpx;
+    color: #333333;
+}
+
+.vlcode-input {
+    margin-top: 21rpx;
+}
+
+.get-vlcode {
+    height: 80rpx;
+    width: 350rpx;
+    border: 1rpx solid #EA4D45;
+    line-height: 80rpx;
+    background-color: #fff;
+    color: #EA4D45;
+    font-size: 30rpx;
+    margin-right: 0;
+}
+
+.log-in {
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-top: 30rpx;
+    background-color: #EA4D45;
+    color: #fff;
+    font-size: 36rpx;
+}
+
+.bottom-ptl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 26rpx;
+    color: #333333;
+    position: absolute;
+    left: 0;
+    bottom: 20rpx;
+    font-weight: 300;
+}
+
+.ptl-link {
+    margin-left: 10rpx;
+    font-weight: bold;
+}

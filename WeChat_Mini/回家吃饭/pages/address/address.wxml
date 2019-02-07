@@ -1,0 +1,48 @@
+<view class="address-container">
+    <view class="address-item">
+        <view class="item-title">收餐人姓名</view>
+        <input bindinput="inputName" class="item-input" maxlength="8" placeholder="请填写收货人姓名" value="{{saveData.name}}"></input>
+    </view>
+    <view class="address-item">
+        <view bindtap="saveLogPhone" class="log-phone" wx:if="{{logPhone&&isShowLogPhone}}">{{logPhone}}</view>
+        <view class="item-title">电话</view>
+        <input bindblur="hideLogPhone" bindfocus="showLogPhone" bindinput="inputPhone" class="item-input" maxlength="11" placeholder="请填写收货人手机号" type="number" value="{{saveData.phone}}"></input>
+    </view>
+    <view class="address-item">
+        <view class="item-title">地址</view>
+        <input bindtap="chooseLocation" class="item-input" disabled="true" placeholder="点击选择 ›" value="{{saveData.map_address}}"></input>
+    </view>
+    <view class="address-item">
+        <view class="item-title">门牌</view>
+        <input bindinput="inputDetailAddress" class="item-input width400" maxlength="40" placeholder="例：12号楼1201室" value="{{saveData.detailed_address}}"></input>
+    </view>
+    <view class="address-tag-title">选择地址标签</view>
+    <view class="address-tag-container">
+        <view bindtap="switchCompany" class="address-tag {{saveData.type==1?'active':''}}">公司</view>
+        <view bindtap="switchHome" class="address-tag {{saveData.type==2?'active':''}}">家</view>
+    </view>
+    <view bindtap="save" class="red-btn">保存</view>
+</view>
+<view class="address-chose" wx:if="{{isChooseLocation}}">
+    <scroll-view class="result-container" scrollY="{{true}}">
+        <view class="search-results" wx:if="{{searchList.length!=0}}">
+            <view bindtap="chooseSearch" class="search-result-item" data-item="{{item}}" wx:for="{{searchList}}" wx:key="item">
+                <view class="result-title">{{item.title}}</view>
+                <view class="result-address">{{item.address}}</view>
+            </view>
+        </view>
+        <view class="address-near" wx:if="{{isFirstFocus&&!addressValue}}">附近地址</view>
+        <view class="search-suggestions" wx:if="{{isFirstFocus&&!addressValue}}">
+            <view bindtap="chooseNearLocation" class="search-suggestion-item" data-item="{{item}}" wx:for="{{nearList}}" wx:key="item">
+                <view class="suggestion-title">{{item.title}}</view>
+            </view>
+        </view>
+        <view class="search-exception" wx:if="{{!isFirstFocus&&searchList.length==0}}">
+            <data-exception exceptionType="noaddress"></data-exception>
+        </view>
+    </scroll-view>
+    <view class="search-container">
+        <input bindblur="blurSearch" bindfocus="focusSearch" bindinput="searchAddress" class="chose-input" placeholder="请输入收餐地址"></input>
+        <view bindtap="cancleSearch" class="search-cancle">取消</view>
+    </view>
+</view>

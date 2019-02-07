@@ -1,0 +1,45 @@
+<view class="detail-main">
+    <view class="kitchen-title">
+        <view class="kitchen-info">
+            <image src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/icon_smrz.png"></image>
+            <text>悠悠韩时光</text>
+        </view>
+        <image class="kitchen-sorr" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/arrow-right1.png"></image>
+    </view>
+    <view class="my-comment">
+        <view class="my-title">
+            <view class="star-info">家厨: 5星 配送: 5星</view>
+            <view class="my-date">2016-06-08</view>
+        </view>
+        <view class="my-comment-content">关注“回家吃饭订阅号”微信号了解更多关于回家吃饭的最新消息平时工作好好吃饭~</view>
+        <view class="send-tag">
+            <image src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/send-tag.png"></image>
+            <view class="send-tag-list">
+                <view class="tag-item">准时送达</view>
+                <view class="tag-item">准时送达</view>
+                <view class="tag-item">准时送达</view>
+                <view class="tag-item">准时送达</view>
+                <view class="tag-item">准时送达</view>
+                <view class="tag-item">准时送达</view>
+            </view>
+        </view>
+        <view class="dish-tag">
+            <image src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/dish-tag.png"></image>
+            <view class="dish-tag-list">
+                <view class="tag-item">野山椒小炒牛肉</view>
+                <view class="tag-item">鱼香肉丝</view>
+                <view class="tag-item">米饭</view>
+            </view>
+        </view>
+    </view>
+    <view class="kitchen-comment">
+        <view class="kitchen-comment-title">
+            <view class="kit-title-txt">家厨回复</view>
+            <view class="kit-date">2016-06-08</view>
+        </view>
+        <view class="kit-comment-txt">关注“回家吃饭订阅号”微信号了解更多关于回家吃饭的最新消息平时工作再忙也要好好吃饭~再忙也要好好吃饭。</view>
+    </view>
+</view>
+<view class="btm-logo">
+    <image src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/comment-logo-detail.png"></image>
+</view>

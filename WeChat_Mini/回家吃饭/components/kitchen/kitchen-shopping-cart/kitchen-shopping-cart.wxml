@@ -1,0 +1,78 @@
+<view class="shopping-cart-container" wx:if="{{!isShowCartList}}">
+    <view class="cart-main {{isIphonex?'padbom68':''}}">
+        <view class="cart-img-container {{!cartData.shopNumber?'empty':''}}">
+            <image bindtap="switchCartList" class="cart-img{{!cartData.shopNumber?'-empty':''}}" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/{{!cartData.shopNumber?'empty-':''}}cart.png"></image>
+            <view class="cart-number-container" wx:if="{{cartData.shopNumber}}">
+                <image class="cart-number" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/num-circle.png"></image>
+                <view class="number">{{cartData.shopNumber}}</view>
+            </view>
+        </view>
+        <view class="cart-empty" wx:if="{{!cartData.shopNumber}}">
+            <view class="cart-empty-text {{cartData.notice?'small':''}}">{{cartData.startBookPrice}}元起订
+        <view bindtap="viewTomorrow" class="cart-notice" wx:if="{{cartData.notice}}">{{cartData.notice}}</view>
+            </view>
+        </view>
+        <view class="cart-shopping" wx:if="{{cartData.shopNumber}}">
+            <view class="cart-shopping-text">
+                <view class="cart-price">￥{{cartData.price}}</view>
+                <view class="cart-discount" wx:if="{{cartData.discount}}">已优惠：￥{{cartData.discount}}</view>
+            </view>
+            <view bindtap="book" class="cart-btn {{cartData.startBookPrice<=cartData.price?'active':''}}">{{cartData.btnText}}</view>
+        </view>
+    </view>
+</view>
+<view class="cart-list" wx:if="{{isShowCartList}}">
+    <view bindtap="switchCartList" class="cart-mask"></view>
+    <view class="cart-list-main {{isIphonex?'padbom68':''}}">
+        <view class="cart-main-title">
+            <view bindtap="clearCartList" class="cart-clear">
+                <image class="cart-clear-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/detail/basket-clear.png"></image>
+                <view class="cart-clear-text">清空菜篮</view>
+            </view>
+            <view bindtap="switchCartList" class="cart-close">
+                <image class="cart-close-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/sorr-down.png"></image>
+            </view>
+        </view>
+        <scroll-view scrollY="{{true}}" style="max-height:438rpx;">
+            <view class="basket-item">
+                <view class="basket-item-info">
+                    <view class="item-title">
+                        <view class="item-title-text">{{cartData.mainFoodName}}</view>
+                        <view class="item-dish-note">请确认{{cartData.mainFoodName}}份数</view>
+                    </view>
+                    <view class="item-price">¥{{cartData.mainFoodPrice*cartData.mainFoodNum}}</view>
+                </view>
+                <order-number bind:callback="riceCallback" orderNum="{{cartData.mainFoodNum}}"></order-number>
+            </view>
+            <view class="basket-item" wx:if="{{index!='cartData'&&item.orderNum!=0}}" wx:for="{{shopDetail}}" wx:key="item">
+                <view class="basket-item-info">
+                    <view class="item-title">
+                        <view class="item-title-text">{{item.dish_name}}</view>
+                        <view class="item-dish-note" wx:if="{{item.discountText}}">{{item.discountText}}</view>
+                    </view>
+                    <view class="item-price">¥{{item.totalPrice}}</view>
+                </view>
+                <order-number bind:callback="callback" max="{{item.leftStock}}" orderDetail="{{item}}" orderNum="{{item.orderNum}}"></order-number>
+            </view>
+            <view class="basket-item" wx:if="{{cartData.boxFee}}">
+                <view class="basket-item-info">
+                    <view class="item-title">
+                        <view class="item-title-text">餐盒费</view>
+                    </view>
+                    <view class="item-price">¥{{cartData.boxFee}}</view>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="basket-secure">
+            <order-secure text="{{cartData.insure}}" wx:if="{{cartData.insure}}"></order-secure>
+        </view>
+        <view class="basket-ctrl">
+            <view class="basket-total-price">
+                <view>订单金额:<text class="total-text">￥{{cartData.price}}</text>
+                </view>
+                <view class="cart-discount" wx:if="{{cartData.discount}}">已优惠：￥{{cartData.discount}}</view>
+            </view>
+            <view bindtap="book" class="basket-btn {{cartData.startBookPrice<=cartData.price?'active':''}}">{{cartData.btnText}}</view>
+        </view>
+    </view>
+</view>

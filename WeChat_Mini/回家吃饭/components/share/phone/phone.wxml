@@ -1,0 +1,5 @@
+<view class="phone-container">
+    <input bindinput="input" class="phone-input" maxlength="11" placeholder="{{placeholder}}" type="number" value="{{phone}}"></input>
+    <view bindtap="receive" class="phone-btn">{{btnText}}</view>
+</view>
+<view class="phone-alert" wx:if="{{valiMsg}}">{{valiMsg}}</view>

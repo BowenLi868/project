@@ -1,0 +1,27 @@
+<view class="card-container">
+    <view class="card-center">
+        <image class="logo" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/rule-icon.png"></image>
+        <view class="title">回家吃饭，全国领先的家庭美食外送平台</view>
+        <view class="icon-lu">
+            <view class="icon-il">
+                <image class="icon-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/icon_axly.png"></image>
+                <text>安心粮油</text>
+            </view>
+            <view class="icon-il">
+                <image class="icon-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/icon_smrz.png"></image>
+                <text>上门认证</text>
+            </view>
+            <view class="icon-il">
+                <image class="icon-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/icon_xgxz.png"></image>
+                <text>小锅小灶</text>
+            </view>
+            <view class="icon-il">
+                <image class="icon-img" src="http://image.jiashuangkuaizi.com/image/wxapp/hjcf/icon_jlwd.png"></image>
+                <text>家里味道</text>
+            </view>
+        </view>
+        <view class="order-secure">
+            <order-secure text="每份餐品都将由中国人保财险（PICC）承担食品安全保障"></order-secure>
+        </view>
+    </view>
+</view>
